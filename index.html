@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WizardRoom - AI & Data Solutions</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description"
+        content="WizardRoom은 최첨단 AI와 데이터 기술로 세상을 변화시키는 스타트업입니다. 병원 마케팅부터 데이터 분석까지, 혁신적인 솔루션을 제공합니다.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wizardroom.co.kr">
+    <meta property="og:title" content="WizardRoom - 기술로 세상을 변화시키는 마법">
+    <meta property="og:description"
+        content="WizardRoom은 최첨단 AI와 데이터 기술로 세상을 변화시키는 스타트업입니다. 병원 마케팅부터 데이터 분석까지, 혁신적인 솔루션을 제공합니다.">
+    <meta property="og:image" content="https://wizardroom.co.kr/images/wizardroom-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="WizardRoom">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://wizardroom.co.kr">
+    <meta name="twitter:title" content="WizardRoom - 기술로 세상을 변화시키는 마법">
+    <meta name="twitter:description"
+        content="WizardRoom은 최첨단 AI와 데이터 기술로 세상을 변화시키는 스타트업입니다. 병원 마케팅부터 데이터 분석까지, 혁신적인 솔루션을 제공합니다.">
+    <meta name="twitter:image" content="https://wizardroom.co.kr/images/wizardroom-og.png">
+
+    <!-- Additional SEO -->
+    <meta name="keywords" content="WizardRoom, AI, 데이터 분석, 인공지능, 병원 마케팅, 스타트업, 데이터 솔루션, MDA 리포트">
+    <meta name="author" content="WizardRoom">
+    <link rel="canonical" href="https://wizardroom.co.kr">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Pretendard:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/components/footer.js" defer></script>
+</head>
+
+<body class="antialiased selection:bg-purple-100 selection:text-purple-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 cursor-pointer">
+                    <span class="font-display text-2xl font-bold tracking-tight text-black">Wizard<span
+                            class="text-purple-600">Room</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about"
+                            class="text-sm font-medium text-gray-600 hover:text-black transition-colors">About</a>
+                        <a href="#products"
+                            class="text-sm font-medium text-gray-600 hover:text-black transition-colors">Products</a>
+                        <a href="#philosophy"
+                            class="text-sm font-medium text-gray-600 hover:text-black transition-colors">Philosophy</a>
+                        <a href="#values"
+                            class="text-sm font-medium text-gray-600 hover:text-black transition-colors">Values</a>
+                        <a href="#contact"
+                            class="px-5 py-2.5 text-sm font-medium rounded-full bg-black text-white hover:bg-gray-800 transition-all">Contact
+                            Us</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-black focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 backdrop-blur-xl border-b border-gray-100 absolute w-full left-0 top-20">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
+                <a href="#about"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50">About</a>
+                <a href="#products"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50">Products</a>
+                <a href="#philosophy"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50">Philosophy</a>
+                <a href="#values"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50">Values</a>
+                <a href="#contact"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-purple-600 font-bold hover:bg-purple-50">Contact
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="js/main.js" defer></script>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/hero-bg.png" alt="Magical AI Background" class="w-full h-full object-cover opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-b to-white"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center z-10">
+            <div
+                class="inline-flex items-center px-3 py-1 rounded-full border border-purple-200 bg-purple-50 text-purple-700 text-xs font-medium mb-8 animate-fade-in-up">
+                <span class="flex w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
+                We are the Wizards of AI Era
+            </div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight mb-8 text-black animate-fade-in-up"
+                style="animation-delay: 0.1s;">
+                Magical <br />
+                <span class="text-gradient">Change.</span>
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed animate-fade-in-up"
+                style="animation-delay: 0.2s;">
+                WizardRoom은 기술로 세상을 변화시키는 스타트업입니다.
+            </p>
+            <div class="mt-10 flex items-center justify-center gap-x-6 animate-fade-in-up"
+                style="animation-delay: 0.3s;">
+                <a href="#about"
+                    class="rounded-full bg-black px-8 py-3.5 text-sm font-semibold text-white shadow-lg hover:bg-gray-800 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black transition-all">
+                    Explore the Magic
+                </a>
+                <a href="#values"
+                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-purple-600 transition-colors">
+                    Our Values <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <!-- <section class="py-10 border-b border-gray-100 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <p class="text-center text-sm font-semibold text-gray-500 mb-8 uppercase tracking-wider">Trusted by
+                innovative companies</p>
+            <div
+                class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex justify-center">
+                    <svg class="h-8" viewBox="0 0 100 30" fill="currentColor">
+                        <path d="M10,15 L20,5 L30,15 L20,25 Z M40,5 H90 V25 H40 Z" fill="#9CA3AF" />
+                    </svg>
+                </div>
+                <div class="flex justify-center">
+                    <svg class="h-8" viewBox="0 0 100 30" fill="currentColor">
+                        <circle cx="20" cy="15" r="10" fill="#9CA3AF" />
+                        <rect x="40" y="5" width="50" height="20" fill="#9CA3AF" />
+                    </svg>
+                </div>
+                <div class="flex justify-center">
+                    <svg class="h-8" viewBox="0 0 100 30" fill="currentColor">
+                        <rect x="10" y="5" width="20" height="20" fill="#9CA3AF" />
+                        <rect x="40" y="5" width="50" height="20" fill="#9CA3AF" />
+                    </svg>
+                </div>
+                <div class="flex justify-center">
+                    <svg class="h-8" viewBox="0 0 100 30" fill="currentColor">
+                        <path d="M10,25 L20,5 L30,25 Z M40,5 H90 V25 H40 Z" fill="#9CA3AF" />
+                    </svg>
+                </div>
+                <div class="flex justify-center md:col-span-1 col-span-2">
+                    <svg class="h-8" viewBox="0 0 100 30" fill="currentColor">
+                        <circle cx="15" cy="15" r="5" fill="#9CA3AF" />
+                        <circle cx="30" cy="15" r="5" fill="#9CA3AF" />
+                        <rect x="50" y="5" width="40" height="20" fill="#9CA3AF" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-purple-200 to-blue-200 rounded-sm blur-2xl opacity-50">
+                    </div>
+                    <div class="relative glass-card rounded-sm p-8 md:p-12 overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-purple-100 rounded-full blur-xl opacity-50">
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-black mb-6">From Myth to Reality</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            하늘에서 불을 내리고, 태풍을 일으키고 바다를 얼리는 마법같이,<br>
+                            현대에는 <span class="text-gradient font-extrabold text-xl">AI, 빅데이터</span> 같은 최신 기술이 이전에는 <span
+                                class="text-black font-bold">상상도 못할 일</span>을
+                            만들어 내고 있습니다.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            이제 측정이 불가능할 만큼 많은 데이터는, 마치 <span class="text-gradient font-bold">미래를 보는 마법</span>처럼 미래를 예측할
+                            수 있게 해줍니다. 우리는 이 기술을 통해 세상에 마법 같은 변화를 만듭니다.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-6 text-black">
+                        We define <span class="text-gradient">New Magic</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        WizardRoom은 <span class="text-purple-600 font-bold">최첨단 AI 알고리즘과 데이터</span>를 결합하여 기존 산업의 한계를
+                        뛰어넘습니다. 우리는 숨겨진 패턴을 발견하고 이를 <span class="text-black font-bold">혁신적인 솔루션</span>으로
+                        전환하여, 기술이 세상에 줄 수 있는 가장 <span class="text-gradient font-bold">극적이고 본질적인 변화</span>를 만들어 냅니다.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-black font-semibold">Powerful AI Solutions</h4>
+                                <p class="text-sm text-gray-500">Solving impossible problems</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-black font-semibold">Data-Driven Future</h4>
+                                <p class="text-sm text-gray-500">Predicting tomorrow with data</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-24 relative bg-gray-50/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 text-black">Our Products</h2>
+                <p class="text-gray-600">Innovative Solutions powered by AI</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="glass-card rounded-sm p-8 md:p-12 relative overflow-hidden group hover:bg-white/80 transition-all duration-500">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-100 to-blue-100 rounded-full blur-3xl opacity-50 -mr-16 -mt-16 group-hover:opacity-70 transition-opacity">
+                    </div>
+
+                    <div class="relative z-10 flex flex-col md:flex-row gap-8 items-start">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white shadow-lg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <h3 class="text-2xl font-bold text-black">MDA 리포트(Medical Data AI Report)</h3>
+                                <span
+                                    class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-semibold">AI-Powered</span>
+                            </div>
+
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                우리는 <span class="font-semibold text-purple-600">고도화된 데이터 분석</span>을 통해 헬스케어 마케팅을 혁신합니다.
+                                MDA 리포트를 통해 병원의 마케팅 효율성을 객관적으로 진단하고, 지역 의료 시장을 선도하기 위한 <span
+                                    class="text-black font-semibold">최적의 성장 전략</span>을 데이터로 확인하십시오.
+                            </p>
+
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-600 text-sm">
+                                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    지역 내 <span class="font-semibold text-gray-800 mx-1">Top-tier 병원</span> 데이터 마이닝 및
+                                    벤치마킹
+                                </li>
+                                <li class="flex items-center text-gray-600 text-sm">
+                                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    주변 병원의 <span class="font-semibold text-gray-800 mx-1">경영 전략</span> 및 <span
+                                        class="font-semibold text-gray-800 mx-1">운영 방안</span> 정밀 분석
+                                </li>
+                                <li class="flex items-center text-gray-600 text-sm">
+                                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    AI 기반 <span class="font-semibold text-gray-800 mx-1">병원 성장 시뮬레이션</span> 및 전략 예측 리포트
+                                </li>
+                            </ul>
+
+                            <a href="pages/mda-report.html"
+                                class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors group-hover:translate-x-1 duration-300">
+                                Learn more about our solution
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-24 bg-gray-50 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-200 to-transparent">
+        </div>
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+            <div class="mb-12">
+                <p class="text-sm font-semibold text-purple-600 tracking-wider uppercase mb-3">Founding Philosophy</p>
+                <h2 class="text-3xl md:text-5xl font-display font-bold mb-8 text-gray-900">
+                    "The people who are crazy enough to think they can change the world,<br />
+                    <span class="text-black">are the ones who do."</span>
+                </h2>
+                <p class="text-gray-500 text-sm">- Apple Think Different, 1997</p>
+            </div>
+
+            <div class="prose prose-lg mx-auto text-gray-600 leading-relaxed">
+                <p class="mb-6">
+                    2023년, 인류는 역사상 가장 강력한 도구인 <strong class="text-black">Artificial Intelligence</strong>를 손에 넣었습니다.<br>
+                    이것은 인간의 언어를 이해하고, 무한한 지식을 품은 새로운 형태의 마법입니다.
+                </p>
+                <p class="mb-6">
+                    인간은 오랫동안 지식의 한계, 시간의 제약에 가로막혀 왔지만,<br>
+                    AI라는 마법이 등장한 순간 우리는 더 이상 과거의 한계에 머물 필요가 없게 되었습니다.
+                </p>
+                <p>
+                    이 거대한 변화의 파도 위에서 세상을 새롭게 만들고자 하는 사람들.<br>
+                    스스로 가능성을 열고, 불가능을 다시 정의하려는 사람들.<br>
+                    그 스타트업이 바로 <strong class="text-black">WizardRoom</strong>입니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section id="values" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 text-black">Core Values</h2>
+                <p class="text-gray-600">WizardRoom이 지향하는 가치</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Value 1 -->
+                <div class="glass-card p-8 rounded-sm relative group bg-white/50">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-100/50 to-blue-100/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-sm">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-6 text-white shadow-lg group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-black mb-4">Revolutionary Thinking</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            우리는 '조금 더 나아지는 개선'을 목표로 하지 않습니다. 2배, 5배가 아닌 100배, 1,000배의 변화를 꿈꿉니다.
+                        </p>
+                        <p class="text-gray-500 text-sm">
+                            기존의 한계를 무너뜨리고, 당연한 것에 질문하며, 존재하지 않는 미래를 상상합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="glass-card p-8 rounded-sm relative group bg-white/50">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-cyan-100/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-sm">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6 text-white shadow-lg group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-black mb-4">Tech for Good</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            기술은 누군가의 삶을 더 나아지게 만들 때 비로소 의미가 있습니다.
+                        </p>
+                        <p class="text-gray-500 text-sm">
+                            한 사람의 시간을 돌려주고, 기업의 본질을 바로잡고, 도시를 풍요롭게 만드는 것. 그것이 우리의 정신입니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="glass-card p-8 rounded-sm relative group bg-white/50">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-pink-100/50 to-purple-100/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-sm">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center mb-6 text-white shadow-lg group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-black mb-4">Human Centric</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            우리가 만드는 모든 것은 결국 '사람'을 향해 있습니다.
+                        </p>
+                        <p class="text-gray-500 text-sm">
+                            기술은 인간을 대체하는 것이 아니라, 인간이 더 인간다워질 수 있도록 돕는 동반자입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section: The Wizards -->
+    <section id="team" class="py-24 bg-gray-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 text-black">The Wizards</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">한계를 넘어 혁신적인 솔루션을 설계하는 전문가 그룹입니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Member 1 -->
+                <div
+                    class="glass-card p-8 rounded-sm text-center group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-200 to-blue-200 p-1">
+                        <div class="w-full h-full rounded-full bg-gray-100 overflow-hidden">
+                            <img src="images/team/l.png" alt="L" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-1">L</h3>
+                    <p class="text-purple-600 font-medium text-sm mb-4">CEO & Founder</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        18y Full-stack Engineer & Serial Entrepreneur<br>
+                        System Architecture • AI • Data Science
+                    </p>
+                </div>
+
+                <!-- Member 2 -->
+                <div
+                    class="glass-card p-8 rounded-sm text-center group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-200 to-cyan-200 p-1">
+                        <div class="w-full h-full rounded-full bg-gray-100 overflow-hidden">
+                            <img src="images/team/j.png" alt="J" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-1">J</h3>
+                    <p class="text-blue-600 font-medium text-sm mb-4">CSO</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        15y Luxury Retail Expert<br>
+                        CX • Branding • Product Design
+                    </p>
+                </div>
+
+                <!-- Member 3 -->
+                <div
+                    class="glass-card p-8 rounded-sm text-center group hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-orange-200 to-yellow-200 p-1">
+                        <div class="w-full h-full rounded-full bg-gray-100 overflow-hidden">
+                            <img src="images/team/john.png" alt="John" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-1">John</h3>
+                    <p class="text-orange-600 font-medium text-sm mb-4">Engineer AI</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        AI Engineer<br>
+                        AI Development & Machine Learning
+                    </p>
+                </div>
+
+                <!-- Member 4 -->
+                <div
+                    class="glass-card p-8 rounded-sm text-center group hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-200 to-violet-200 p-1">
+                        <div class="w-full h-full rounded-full bg-gray-100 overflow-hidden">
+                            <img src="images/team/jenny.png" alt="Jenny" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-1">Jenny</h3>
+                    <p class="text-indigo-600 font-medium text-sm mb-4">UX Designer AI</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        UX Designer<br>
+                        User Experience & Interface Design & Prototyping
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-6 text-black">
+                        Start your <span class="text-gradient">Magic</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        WizardRoom과 함께 불가능을 가능으로 만들어보세요.<br>
+                        우리는 언제나 새로운 도전을 기다립니다.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-black font-semibold">Email</h4>
+                                <p class="text-gray-500">wizardroom@naver.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-black font-semibold">Office</h4>
+                                <p class="text-gray-500">Incheon, Korea</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm bg-white/50">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name"
+                                class="w-full rounded-md border-gray-200 bg-white/50 focus:border-purple-500 focus:ring-purple-500 shadow-sm py-3 px-4"
+                                placeholder="Your name">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4"
+                                class="w-full rounded-md border-gray-200 bg-white/50 focus:border-purple-500 focus:ring-purple-500 shadow-sm py-3 px-4"
+                                placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full rounded-full bg-black px-8 py-3.5 text-sm font-semibold text-white shadow-lg hover:bg-gray-800 hover:shadow-xl transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <site-footer></site-footer>
+
+</body>
+
+</html>

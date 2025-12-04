@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDA Report - 4. 전략 제안 | WizardRoom</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&family=Pretendard:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind-config.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/mda-report.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-black text-white font-sans antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-900/20 rounded-full blur-[120px] animate-pulse-slow">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-900/20 rounded-full blur-[120px] animate-pulse-slow delay-1000">
+        </div>
+        <div
+            class="absolute top-[20%] right-[10%] w-[20%] h-[20%] bg-cyan-900/10 rounded-full blur-[80px] animate-float">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+                    W</div>
+                <span
+                    class="font-display font-bold text-xl tracking-tight text-white group-hover:text-cyan-400 transition-colors">WizardRoom</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../index.html"
+                    class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="#" class="text-sm font-medium text-white">Reports</a>
+                <a href="../index.html#contact"
+                    class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto">
+
+            <!-- Header -->
+            <header class="mb-16 text-center animate-fade-in-up">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-sm font-medium mb-6 hover:bg-white/10 transition-colors cursor-default">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    Market Data Analysis Report
+                </div>
+                <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">전략
+                        제안</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    2025년 12월 성장을 위한 맞춤형 실행 전략 및 로드맵
+                </p>
+            </header>
+
+            <!-- Report Navigation Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16 animate-fade-in delay-100">
+                <a href="mda-report-1.html"
+                    class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white transition-all">
+                    1. 지역 시장 분석
+                </a>
+                <a href="mda-report-2.html"
+                    class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white transition-all">
+                    2. 경쟁 병원 분석
+                </a>
+                <a href="mda-report-3.html"
+                    class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white transition-all">
+                    3. 클라이언트 진단
+                </a>
+                <a href="mda-report-4.html"
+                    class="px-6 py-3 rounded-xl bg-cyan-500/20 border border-cyan-500/50 text-cyan-400 font-bold transition-all shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+                    4. 전략 제안
+                </a>
+            </div>
+
+            <!-- 1. 키워드 전략 (Priority Cards) -->
+            <section class="mb-24 animate-fade-in delay-200">
+                <div class="mb-10 border-l-4 border-cyan-400 pl-5">
+                    <h2 class="text-3xl font-bold font-display mb-2 text-white">1. 키워드 전략 (Priority Keywords)</h2>
+                    <p class="text-gray-400">2025년 12월 핵심 공략 키워드</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <!-- Priority 1 -->
+                    <div
+                        class="bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-cyan-500/30 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <span class="text-8xl">👁️</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-6">
+                            <h4 class="text-2xl font-bold text-white">#눈성형</h4>
+                            <span class="px-3 py-1 bg-cyan-500 text-black text-xs font-bold rounded-full">1순위</span>
+                        </div>
+                        <p class="text-gray-300 mb-6 min-h-[48px]">50대 이상 타겟의 압도적 수요(39.2%)와 겨울 방학 시즌의 결합.</p>
+                        <ul class="text-sm text-gray-400 space-y-2 border-t border-white/10 pt-4">
+                            <li class="flex justify-between"><span>검색량</span> <span
+                                    class="text-white font-bold">626회/월</span></li>
+                            <li class="flex justify-between"><span>경쟁 강도</span> <span
+                                    class="text-red-400 font-bold">High</span></li>
+                            <li class="flex justify-between"><span>추천 타겟</span> <span class="text-white font-bold">50대+,
+                                    20대</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Priority 2 -->
+                    <div
+                        class="bg-white/5 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 hover:border-purple-500/30">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <span class="text-8xl">👃</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-6">
+                            <h4 class="text-2xl font-bold text-white">#코성형</h4>
+                            <span
+                                class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full">2순위</span>
+                        </div>
+                        <p class="text-gray-300 mb-6 min-h-[48px]">20-30대 젊은 층의 꾸준한 수요. 전후 사진 중심의 시각적 어필 필요.</p>
+                        <ul class="text-sm text-gray-400 space-y-2 border-t border-white/10 pt-4">
+                            <li class="flex justify-between"><span>검색량</span> <span
+                                    class="text-white font-bold">414회/월</span></li>
+                            <li class="flex justify-between"><span>경쟁 강도</span> <span
+                                    class="text-orange-400 font-bold">Med-High</span></li>
+                            <li class="flex justify-between"><span>추천 타겟</span> <span
+                                    class="text-white font-bold">20-30대</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Priority 3 -->
+                    <div
+                        class="bg-white/5 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 hover:border-green-500/30">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <span class="text-8xl">✨</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-6">
+                            <h4 class="text-2xl font-bold text-white">#리프팅</h4>
+                            <span
+                                class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-bold rounded-full">3순위</span>
+                        </div>
+                        <p class="text-gray-300 mb-6 min-h-[48px]">중장년층 안티에이징 핵심 키워드. 시술 효과와 안전성 강조.</p>
+                        <ul class="text-sm text-gray-400 space-y-2 border-t border-white/10 pt-4">
+                            <li class="flex justify-between"><span>검색량</span> <span
+                                    class="text-white font-bold">295회/월</span></li>
+                            <li class="flex justify-between"><span>경쟁 강도</span> <span
+                                    class="text-yellow-400 font-bold">Medium</span></li>
+                            <li class="flex justify-between"><span>추천 타겟</span> <span
+                                    class="text-white font-bold">40-50대</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. 12월 트렌드 예측 -->
+            <section class="mb-24 animate-fade-in delay-300">
+                <div class="mb-10 border-l-4 border-cyan-400 pl-5">
+                    <h2 class="text-3xl font-bold font-display mb-2 text-white">2. 12월 트렌드 예측 (Seasonality)</h2>
+                    <p class="text-gray-400">월별 검색량 추이 및 시즌 이슈</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-xl font-bold text-white mb-4">월별 키워드 검색량 추이</h4>
+                        <div class="relative h-[300px] w-full">
+                            <canvas id="forecastChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-xl font-bold text-white mb-4">예측 인사이트</h4>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center text-2xl">
+                                    👙</div>
+                                <div>
+                                    <h5 class="text-lg font-bold text-white mb-1">가슴성형 수요 급증</h5>
+                                    <p class="text-sm text-gray-400">12월은 가슴성형 검색량이 연중 최고치를 기록하는 시기입니다. 겨울 방학 및 연말 휴가를
+                                        이용한 수술 수요가 집중됩니다.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-2xl">
+                                    💇</div>
+                                <div>
+                                    <h5 class="text-lg font-bold text-white mb-1">탈모 관련 관심 증가</h5>
+                                    <p class="text-sm text-gray-400">찬 바람이 부는 겨울철, 탈모 관리에 대한 관심도가 상승하는 추세입니다. 모발이식 등의
+                                        키워드도 주목할 필요가 있습니다.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-white/5 rounded-xl border border-white/5 text-sm text-gray-300">
+                                <strong>Action:</strong> 기존 주력인 눈/코 성형 외에 <strong>가슴성형</strong> 관련 콘텐츠 비중을 12월 한정으로
+                                <strong>30% 이상 확대</strong>하는 전략을 제안합니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 랭킹 상승을 위한 리뷰 전략 -->
+            <section class="mb-24 animate-fade-in delay-300">
+                <div class="mb-10 border-l-4 border-cyan-400 pl-5">
+                    <h2 class="text-3xl font-bold font-display mb-2 text-white">3. 랭킹 상승을 위한 리뷰 전략</h2>
+                    <p class="text-gray-400">리뷰 수 증대 및 답글 관리 방안</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-4">현재 상황 진단</h4>
+                            <ul class="space-y-4">
+                                <li class="bg-black/20 p-4 rounded-xl border border-white/5">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-400">방문자 리뷰 수</span>
+                                        <span class="text-white font-bold">668건</span>
+                                    </div>
+                                    <div class="text-xs text-red-400">상위 10위 평균(590건) 대비 양호하나 정체 중</div>
+                                </li>
+                                <li class="bg-black/20 p-4 rounded-xl border border-white/5">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-gray-400">블로그 리뷰 수</span>
+                                        <span class="text-white font-bold">4,077건</span>
+                                    </div>
+                                    <div class="text-xs text-red-400">상위 10위 평균(4,460건) 대비 부족 (-383건)</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-cyan-400 mb-4">실행 가이드 (Action Plan)</h4>
+                            <ul class="space-y-3 text-sm text-gray-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-cyan-400 font-bold">1.</span>
+                                    <div>
+                                        <strong>블로그 체험단 확대:</strong> 부족한 블로그 리뷰 수(약 400건)를 메우기 위해 월 30건 이상의 체험단 운영이
+                                        필요합니다.
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-cyan-400 font-bold">2.</span>
+                                    <div>
+                                        <strong>영수증 리뷰 이벤트:</strong> 내원 고객 대상 포토 리뷰 작성 시 커피 쿠폰 증정 등 즉각적인 보상 체계 마련.
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-cyan-400 font-bold">3.</span>
+                                    <div>
+                                        <strong>답글 관리 강화:</strong> 현재 답글률을 유지하되, 키워드(눈성형, 강남성형외과 등)를 포함한 정성스러운 답글로 검색 노출
+                                        유도.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 블로그 운영 전략 -->
+            <section class="mb-24 animate-fade-in delay-300">
+                <div class="mb-10 border-l-4 border-cyan-400 pl-5">
+                    <h2 class="text-3xl font-bold font-display mb-2 text-white">4. 블로그 운영 전략</h2>
+                    <p class="text-gray-400">콘텐츠 캘린더 및 발행 목표</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                    <div class="flex flex-col md:flex-row gap-8 items-center mb-8">
+                        <div class="w-full md:w-1/3 text-center">
+                            <div class="text-gray-400 text-sm mb-2">현재 월 평균 발행량</div>
+                            <div class="text-5xl font-bold text-red-400 mb-2">5.9건</div>
+                            <div class="text-xs text-gray-500">상위권(110건) 대비 절대 부족</div>
+                        </div>
+                        <div class="w-full md:w-2/3">
+                            <div class="bg-blue-500/10 border border-blue-500/20 rounded-2xl p-6">
+                                <h4 class="text-blue-400 font-bold mb-2">🚀 목표: 월 12건 이상 발행 (주 3회)</h4>
+                                <p class="text-sm text-gray-300">
+                                    현재 발행량으로는 상위권 진입이 불가능합니다. 최소 주 3회, 월 12건 이상의 꾸준한 발행으로 '활동성 지수'를 높여야 합니다. 양질의 콘텐츠도
+                                    중요하지만, 지금은 <strong>절대적인 발행량 확보</strong>가 우선입니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="text-lg font-bold text-white mb-4">콘텐츠 캘린더 예시 (주간)</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                            <div class="text-cyan-400 font-bold mb-2">월요일 (정보성)</div>
+                            <div class="text-sm text-white font-bold mb-1">눈성형 Q&A</div>
+                            <p class="text-xs text-gray-400">"쌍꺼풀 수술 후 붓기, 언제 빠질까요? 3단계 회복 과정"</p>
+                        </div>
+                        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                            <div class="text-purple-400 font-bold mb-2">수요일 (후기성)</div>
+                            <div class="text-sm text-white font-bold mb-1">리프팅 사례</div>
+                            <p class="text-xs text-gray-400">"50대 어머니 효도 선물, 실리프팅 전후 변화 공개"</p>
+                        </div>
+                        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                            <div class="text-green-400 font-bold mb-2">금요일 (이슈/트렌드)</div>
+                            <div class="text-sm text-white font-bold mb-1">시즌 이슈</div>
+                            <p class="text-xs text-gray-400">"겨울 방학 성형, 지금 예약해야 하는 이유 (12월 혜택)"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <site-footer theme="dark" base-path=".."></site-footer>
+    <script src="../js/components/footer.js"></script>
+
+    <!-- Page Specific Scripts -->
+    <script>
+        // Forecast Chart (Line)
+        new Chart(document.getElementById('forecastChart'), {
+            type: 'line',
+            data: {
+                labels: ['9월', '10월', '11월', '12월(예측)'],
+                datasets: [
+                    {
+                        label: '눈성형',
+                        data: [97, 85, 26, 120],
+                        borderColor: '#22d3ee',
+                        tension: 0.4
+                    },
+                    {
+                        label: '가슴성형',
+                        data: [12, 15, 11, 45],
+                        borderColor: '#f472b6',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { labels: { color: '#9ca3af' } } },
+                scales: {
+                    y: { grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: '#9ca3af' } },
+                    x: { grid: { display: false }, ticks: { color: '#9ca3af' } }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

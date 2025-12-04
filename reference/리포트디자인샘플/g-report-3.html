@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDA Report - 3. 클라이언트 병원 진단 | WizardRoom</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&family=Pretendard:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind-config.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/mda-report.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-black text-white font-sans antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-900/20 rounded-full blur-[120px] animate-pulse-slow">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-900/20 rounded-full blur-[120px] animate-pulse-slow delay-1000">
+        </div>
+        <div
+            class="absolute top-[20%] right-[10%] w-[20%] h-[20%] bg-cyan-900/10 rounded-full blur-[80px] animate-float">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+                    W</div>
+                <span
+                    class="font-display font-bold text-xl tracking-tight text-white group-hover:text-cyan-400 transition-colors">WizardRoom</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../index.html"
+                    class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="#" class="text-sm font-medium text-white">Reports</a>
+                <a href="../index.html#contact"
+                    class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto">
+
+            <!-- Header -->
+            <header class="mb-16 text-center animate-fade-in-up">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-sm font-medium mb-6 hover:bg-white/10 transition-colors cursor-default">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    Market Data Analysis Report
+                </div>
+                <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">클라이언트
+                        병원 진단</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    제이준성형외과의원 심층 진단: 리뷰, 재방문율, SWOT 분석
+                </p>
+            </header>
+
+            <!-- Report Navigation Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16 animate-fade-in delay-100">
+                <a href="mda-report-1.html"
+                    class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white transition-all">
+                    1. 지역 시장 분석
+                </a>
+                <a href="mda-report-2.html"
+                    class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white transition-all">
+                    2. 경쟁 병원 분석
+                </a>
+                <a href="mda-report-3.html"
+                    class="px-6 py-3 rounded-xl bg-cyan-500/20 border border-cyan-500/50 text-cyan-400 font-bold transition-all shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+                    3. 클라이언트 진단
+                </a>
+                <a href="mda-report-4.html"
+                    class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white transition-all">
+                    4. 전략 제안
+                </a>
+            </div>
+
+            <!-- 1. 리뷰 및 평판 분석 -->
+            <section class="mb-24 animate-fade-in delay-200">
+                <div class="mb-10 border-l-4 border-cyan-400 pl-5">
+                    <h2 class="text-3xl font-bold font-display mb-2 text-white">1. 리뷰 및 평판 분석</h2>
+                    <p class="text-gray-400">환자 만족도 및 감성 분석 결과</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Sentiment Chart -->
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-xl font-bold text-white mb-4">리뷰 감성 분석 (Sentiment)</h4>
+                        <div class="relative h-[300px] w-full mb-4">
+                            <canvas id="sentimentChart"></canvas>
+                        </div>
+                        <div class="text-center text-sm text-gray-400">
+                            <p>전체 리뷰의 <strong class="text-green-400">96.6%</strong>가 긍정적입니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- Keyword Analysis -->
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-xl font-bold text-white mb-4">주요 키워드 분석</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-300">친절함</span>
+                                    <span class="text-cyan-400">99건</span>
+                                </div>
+                                <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-cyan-400" style="width: 99%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-300">진료 만족도</span>
+                                    <span class="text-cyan-400">75건</span>
+                                </div>
+                                <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-cyan-400" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-300">과잉진료 없음</span>
+                                    <span class="text-cyan-400">20건</span>
+                                </div>
+                                <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-cyan-400" style="width: 20%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-300">대기시간</span>
+                                    <span class="text-red-400">4건 (부정)</span>
+                                </div>
+                                <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-red-400" style="width: 4%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-white/5 rounded-xl text-sm text-gray-300">
+                            <strong>Insight:</strong> 의료진의 친절함과 진료 결과에 대한 만족도가 매우 높습니다. '과잉진료 없음' 키워드는 신뢰도 형성에 긍정적입니다.
+                            단, 대기시간 관련 소수의 불만은 개선이 필요합니다.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. 재방문율 및 환자 유입 분석 -->
+            <section class="mb-24 animate-fade-in delay-300">
+                <div class="mb-10 border-l-4 border-cyan-400 pl-5">
+                    <h2 class="text-3xl font-bold font-display mb-2 text-white">2. 재방문율 및 환자 유입 분석</h2>
+                    <p class="text-gray-400">신규 vs 재방문 환자 비율 및 문제점 진단</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                        <div class="text-center p-6 bg-black/20 rounded-2xl border border-white/5">
+                            <div class="text-gray-400 text-sm mb-2">신규 환자 비율</div>
+                            <div class="text-4xl font-bold text-cyan-400">99.1%</div>
+                            <div class="text-xs text-gray-500 mt-1">매우 높음</div>
+                        </div>
+                        <div class="text-center p-6 bg-black/20 rounded-2xl border border-white/5">
+                            <div class="text-gray-400 text-sm mb-2">재방문 환자 비율</div>
+                            <div class="text-4xl font-bold text-red-400">0.9%</div>
+                            <div class="text-xs text-gray-500 mt-1">매우 낮음 (심각)</div>
+                        </div>
+                        <div class="text-center p-6 bg-black/20 rounded-2xl border border-white/5">
+                            <div class="text-gray-400 text-sm mb-2">총 방문자 수 (추정)</div>
+                            <div class="text-4xl font-bold text-white">226명</div>
+                            <div class="text-xs text-gray-500 mt-1">최근 데이터 기준</div>
+                        </div>
+                    </div>
+                    <div class="bg-red-500/10 border border-red-500/20 rounded-2xl p-6">
+                        <h4 class="text-red-400 font-bold mb-2 flex items-center gap-2">⚠️ Critical Issue: 낮은 재방문율</h4>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            신규 환자 유입은 매우 활발하나, 재방문으로 이어지는 비율이 1% 미만입니다. 이는 성형외과 특성(1회성 수술)을 고려하더라도 매우 낮은 수치입니다. 피부과 시술 등
+                            주기적 방문이 필요한 연계 상품 개발이나, 수술 후 관리 프로그램(에프터 케어)을 통한 재방문 유도가 시급합니다.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 관심도 분석 (조회수) -->
+            <section class="mb-24 animate-fade-in delay-300">
+                <div class="mb-10 border-l-4 border-cyan-400 pl-5">
+                    <h2 class="text-3xl font-bold font-display mb-2 text-white">3. 관심도 분석 (조회수)</h2>
+                    <p class="text-gray-400">온라인 노출 및 잠재 고객 관심도</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-4">총 조회수 비교</h4>
+                            <ul class="space-y-4">
+                                <li class="flex justify-between items-center p-3 bg-white/5 rounded-xl">
+                                    <span class="text-gray-300">제이준성형외과의원</span>
+                                    <span class="font-bold text-white">155,619건</span>
+                                </li>
+                                <li class="flex justify-between items-center p-3 bg-white/5 rounded-xl">
+                                    <span class="text-gray-300">경쟁 병원 평균</span>
+                                    <span class="font-bold text-cyan-400">433,000건</span>
+                                </li>
+                            </ul>
+                            <div class="mt-4 text-sm text-red-400">
+                                * 경쟁 병원 평균 대비 35.9% 수준 (낮음)
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-4">인사이트</h4>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                조회수는 잠재 환자의 관심도를 나타내는 핵심 지표입니다. 현재 경쟁 병원 대비 35.9% 수준으로, 온라인 노출이 부족한 상태입니다. 블로그 운영 강화와 검색
+                                최적화를 통해 조회수를 높여야 합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. SWOT 분석 -->
+            <section class="mb-24 animate-fade-in delay-300">
+                <div class="mb-10 border-l-4 border-cyan-400 pl-5">
+                    <h2 class="text-3xl font-bold font-display mb-2 text-white">4. SWOT 분석</h2>
+                    <p class="text-gray-400">강점, 약점, 기회, 위협 요인 종합 진단</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Strengths -->
+                    <div class="bg-blue-500/5 border border-blue-500/20 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-blue-400 font-bold text-xl mb-4 flex items-center gap-2">
+                            <span class="text-2xl">💪</span> Strengths (강점)
+                        </h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-400 mt-1">•</span>
+                                <div><strong>압도적인 긍정 리뷰 (96.6%)</strong>: 환자 만족도가 매우 높음</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-400 mt-1">•</span>
+                                <div><strong>높은 신규 유입 (99.1%)</strong>: 마케팅 채널의 유입 효과 우수</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-400 mt-1">•</span>
+                                <div><strong>전문의 역량</strong>: 경쟁 병원 대비 많은 전문의(5명) 보유</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Weaknesses -->
+                    <div class="bg-red-500/5 border border-red-500/20 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-red-400 font-bold text-xl mb-4 flex items-center gap-2">
+                            <span class="text-2xl">🔻</span> Weaknesses (약점)
+                        </h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 mt-1">•</span>
+                                <div><strong>매우 낮은 재방문율 (0.9%)</strong>: 고객 생애 가치(LTV) 낮음</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 mt-1">•</span>
+                                <div><strong>낮은 온라인 관심도</strong>: 경쟁사 대비 조회수 및 검색량 부족</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 mt-1">•</span>
+                                <div><strong>블로그 콘텐츠 부족</strong>: 상위권 대비 발행량 절대 열세</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Opportunities -->
+                    <div class="bg-emerald-500/5 border border-emerald-500/20 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-emerald-400 font-bold text-xl mb-4 flex items-center gap-2">
+                            <span class="text-2xl">🚀</span> Opportunities (기회)
+                        </h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-400 mt-1">•</span>
+                                <div><strong>경쟁사의 마케팅 공백</strong>: 최근 상위 병원들의 블로그 발행량 급감</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-400 mt-1">•</span>
+                                <div><strong>겨울 성수기 수요</strong>: 방학/연말 시즌 성형 수요 증가 예상</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-400 mt-1">•</span>
+                                <div><strong>50대 타겟 시장</strong>: 구매력 높은 중장년층의 안티에이징 니즈</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Threats -->
+                    <div class="bg-amber-500/5 border border-amber-500/20 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-amber-400 font-bold text-xl mb-4 flex items-center gap-2">
+                            <span class="text-2xl">⚠️</span> Threats (위협)
+                        </h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-400 mt-1">•</span>
+                                <div><strong>상위 병원의 독점</strong>: 1~3위 병원의 시장 지배력 강화</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-400 mt-1">•</span>
+                                <div><strong>마케팅 비용 상승</strong>: 경쟁 심화로 인한 키워드 단가 상승 우려</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <site-footer theme="dark" base-path=".."></site-footer>
+    <script src="../js/components/footer.js"></script>
+
+    <!-- Page Specific Scripts -->
+    <script>
+        // Sentiment Chart (Doughnut)
+        new Chart(document.getElementById('sentimentChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Positive', 'Neutral', 'Negative'],
+                datasets: [{
+                    data: [96.6, 3.4, 0],
+                    backgroundColor: ['#4ade80', '#94a3b8', '#f87171'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'right', labels: { color: '#9ca3af', font: { family: 'Inter' } } }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

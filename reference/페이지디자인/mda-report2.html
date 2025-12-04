@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDA Premium Report - WizardRoom</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../css/mda-report.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="../js/components/footer.js" defer></script>
+</head>
+
+<body class="text-white antialiased selection:bg-purple-500 selection:text-white overflow-x-hidden">
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <!-- Header -->
+        <header class="py-10 border-b border-white/10 mb-16 animate-fade-in">
+            <div class="header-content">
+                <div class="flex items-center gap-2.5 mb-2.5">
+                    <span
+                        class="inline-block px-3 py-1.5 rounded-full bg-blue-500/15 text-blue-400 text-xs font-semibold">PREMIUM
+                        REPORT</span>
+                    <span
+                        class="inline-block px-3 py-1.5 rounded-full bg-purple-500/15 text-purple-400 text-xs font-semibold">2025.11.27</span>
+                </div>
+                <h1 class="text-5xl font-bold font-display mb-2.5">Medical Data AI <span
+                        class="text-gradient">Analysis</span></h1>
+                <p class="text-xl text-gray-400">원장님, 우리 병원의 마케팅 현주소를 데이터로 진단하고<br>상위 1% 병원의 전략을 벤치마킹하여 최적의 솔루션을 제안합니다.
+                </p>
+            </div>
+        </header>
+
+        <!-- About MDA Report -->
+        <section class="mb-20 animate-fade-in delay-75">
+            <div class="mb-8 border-l-4 border-cyan-400 pl-5">
+                <h2 class="text-3xl font-bold font-display mb-1">About MDA Report</h2>
+                <p class="text-gray-400">데이터로 증명하는 병원 성장 전략</p>
+            </div>
+
+            <!-- Philosophy -->
+            <div
+                class="rounded-3xl p-8 backdrop-blur-xl border border-white/10 mb-6 bg-gradient-to-br from-[#141419]/80 to-[#1e1e28]/80">
+                <div class="text-center py-5">
+                    <p class="text-lg leading-loose text-gray-200 mb-5">
+                        "병원의 운영은 ‘감’이 아니라<br>
+                        <span class="text-gradient font-bold">환자의 목소리, 운영 데이터, 경쟁 환경</span>을<br>
+                        어떻게 해석하느냐에 달려 있습니다."
+                    </p>
+                    <p class="text-base text-gray-400">
+                        MDA(Medical Data Analysis) 리포트는 <strong>5,000개 병원, 43만 건의 리뷰, 23만 건의 블로그 데이터</strong>를<br>
+                        AI로 분석하여 상위 1% 병원의 성공 방정식을 귀하의 병원에 맞게 제안합니다.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300 text-center">
+                    <div class="text-5xl font-extrabold font-display leading-tight mb-2 text-gradient">5,000+</div>
+                    <div class="text-sm text-gray-400 mt-1">Hospitals Analyzed</div>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300 text-center">
+                    <div class="text-5xl font-extrabold font-display leading-tight mb-2 text-gradient">430k+</div>
+                    <div class="text-sm text-gray-400 mt-1">Patient Reviews</div>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300 text-center">
+                    <div class="text-5xl font-extrabold font-display leading-tight mb-2 text-gradient">230k+</div>
+                    <div class="text-sm text-gray-400 mt-1">Blog Contents</div>
+                </div>
+            </div>
+
+            <!-- Process -->
+            <div
+                class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                <div class="flex justify-between items-center mb-5">
+                    <h3 class="text-xl text-white font-bold">AI Analysis Process</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400 font-bold">
+                            1</div>
+                        <h4 class="mb-1 font-bold">Data Collection</h4>
+                        <p class="text-xs text-gray-400">지역 내 경쟁 병원<br>운영 데이터 수집</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-400 font-bold">
+                            2</div>
+                        <h4 class="mb-1 font-bold">AI Analysis</h4>
+                        <p class="text-xs text-gray-400">상위 10개 병원<br>성공 패턴 분석</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-pink-400 font-bold">
+                            3</div>
+                        <h4 class="mb-1 font-bold">Insight</h4>
+                        <p class="text-xs text-gray-400">랭킹 결정 요인 및<br>핵심 전략 도출</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-emerald-400 font-bold">
+                            4</div>
+                        <h4 class="mb-1 font-bold">Strategy</h4>
+                        <p class="text-xs text-gray-400">우리 병원 맞춤형<br>실행 계획 수립</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Market Overview -->
+        <section class="mb-20 animate-fade-in delay-100">
+            <div class="mb-8 border-l-4 border-cyan-400 pl-5">
+                <h2 class="text-3xl font-bold font-display mb-1">Market Overview</h2>
+                <p class="text-gray-400">강남 성형외과 시장 경쟁 밀도 및 규모 분석</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="text-gray-400 text-sm uppercase tracking-wider">Total Hospitals</div>
+                    <div class="text-5xl font-extrabold font-display leading-tight mb-2 text-gradient">294</div>
+                    <div class="text-sm text-gray-400 mt-1">검색 키워드 노출 병원 수</div>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="text-gray-400 text-sm uppercase tracking-wider">Avg. Departments</div>
+                    <div class="text-5xl font-extrabold font-display leading-tight mb-2">3.2</div>
+                    <div class="text-sm text-gray-400 mt-1">병원당 평균 진료과목 수</div>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="text-gray-400 text-sm uppercase tracking-wider">Market Saturation</div>
+                    <div class="text-5xl font-extrabold font-display leading-tight mb-2 text-red-400">High</div>
+                    <div class="text-sm text-gray-400 mt-1">매우 높은 경쟁 강도</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Top Competitors -->
+        <section class="mb-20 animate-fade-in delay-200">
+            <div class="mb-8 border-l-4 border-cyan-400 pl-5">
+                <h2 class="text-3xl font-bold font-display mb-1">Top Competitors</h2>
+                <p class="text-gray-400">상위 10개 경쟁 병원 분석 및 내 병원 위치</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300 md:col-span-2">
+                    <div class="flex justify-between items-center mb-5">
+                        <h3 class="text-xl text-white font-bold">Competitor Ranking</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse text-sm">
+                            <thead>
+                                <tr>
+                                    <th class="text-left p-4 text-gray-400 border-b border-white/10 font-medium w-12">
+                                        Rank</th>
+                                    <th class="text-left p-4 text-gray-400 border-b border-white/10 font-medium">
+                                        Hospital Name</th>
+                                    <th class="text-left p-4 text-gray-400 border-b border-white/10 font-medium">
+                                        Specialists</th>
+                                    <th class="text-left p-4 text-gray-400 border-b border-white/10 font-medium">Reviews
+                                    </th>
+                                    <th class="text-left p-4 text-gray-400 border-b border-white/10 font-medium">Score
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-yellow-400/5">
+                                    <td class="p-4 border-b border-white/5"><span
+                                            class="inline-flex items-center justify-center w-7 h-7 bg-[#FFD700] text-black rounded-full font-bold text-xs">1</span>
+                                    </td>
+                                    <td class="p-4 border-b border-white/5"><strong>신상성형외과</strong></td>
+                                    <td class="p-4 border-b border-white/5">12명</td>
+                                    <td class="p-4 border-b border-white/5">4,521</td>
+                                    <td class="p-4 border-b border-white/5">98.5</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 border-b border-white/5"><span
+                                            class="inline-flex items-center justify-center w-7 h-7 bg-[#C0C0C0] text-black rounded-full font-bold text-xs">2</span>
+                                    </td>
+                                    <td class="p-4 border-b border-white/5">에이비성형외과</td>
+                                    <td class="p-4 border-b border-white/5">8명</td>
+                                    <td class="p-4 border-b border-white/5">3,890</td>
+                                    <td class="p-4 border-b border-white/5">94.2</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 border-b border-white/5"><span
+                                            class="inline-flex items-center justify-center w-7 h-7 bg-[#CD7F32] text-black rounded-full font-bold text-xs">3</span>
+                                    </td>
+                                    <td class="p-4 border-b border-white/5">디에이성형외과</td>
+                                    <td class="p-4 border-b border-white/5">15명</td>
+                                    <td class="p-4 border-b border-white/5">3,100</td>
+                                    <td class="p-4 border-b border-white/5">91.8</td>
+                                </tr>
+                                <!-- Client Hospital Highlight -->
+                                <tr class="border-2 border-cyan-400 bg-blue-500/10">
+                                    <td class="p-4 border-b border-white/5"><span
+                                            class="inline-flex items-center justify-center w-7 h-7 bg-cyan-400 text-black rounded-full font-bold text-xs">16</span>
+                                    </td>
+                                    <td class="p-4 border-b border-white/5"><strong>제이준성형외과 (Me)</strong></td>
+                                    <td class="p-4 border-b border-white/5">5명</td>
+                                    <td class="p-4 border-b border-white/5">668</td>
+                                    <td class="p-4 border-b border-white/5">72.4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-5">
+                        <h3 class="text-xl text-white font-bold">No.1 Analysis</h3>
+                    </div>
+                    <div class="text-center mb-5">
+                        <div class="text-3xl font-extrabold font-display leading-tight mb-2">신상성형외과</div>
+                        <span
+                            class="inline-block px-3 py-1.5 rounded-full bg-purple-500/15 text-purple-400 text-xs font-semibold">Market
+                            Leader</span>
+                    </div>
+                    <ul class="list-none text-gray-400">
+                        <li class="mb-2.5">• 전문의 비율: <strong>50%</strong> (매우 높음)</li>
+                        <li class="mb-2.5">• 블로그 커버리지: <strong>0.5</strong> (압도적)</li>
+                        <li class="mb-2.5">• 월간 조회수: <strong>450,000+</strong></li>
+                    </ul>
+                    <div class="bg-cyan-400/5 border border-cyan-400/20 rounded-xl p-4 mt-5 flex gap-4 items-start">
+                        <p class="text-sm">"압도적인 블로그 발행량과 전문의 브랜딩으로 시장을 장악하고 있습니다."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Positioning & Diagnosis -->
+        <section class="mb-20 animate-fade-in delay-300">
+            <div class="mb-8 border-l-4 border-cyan-400 pl-5">
+                <h2 class="text-3xl font-bold font-display mb-1">Positioning & Diagnosis</h2>
+                <p class="text-gray-400">시장 평균 대비 내 병원의 현재 위치 진단</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-5">
+                        <h3 class="text-xl text-white font-bold">Gap Analysis</h3>
+                    </div>
+                    <div
+                        class="flex items-center justify-between bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 rounded-2xl p-5 mb-4">
+                        <div class="text-center flex-1">
+                            <div class="text-gray-400 text-sm uppercase tracking-wider">MY HOSPITAL</div>
+                            <div class="text-3xl font-extrabold font-display leading-tight mb-2 text-cyan-400">16th
+                            </div>
+                            <div>Ranking</div>
+                        </div>
+                        <div class="font-extrabold text-gray-400 text-xl">VS</div>
+                        <div class="text-center flex-1">
+                            <div class="text-gray-400 text-sm uppercase tracking-wider">TOP 10 AVG</div>
+                            <div class="text-3xl font-extrabold font-display leading-tight mb-2 text-gray-400">5.5th
+                            </div>
+                            <div>Ranking</div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center justify-between bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 rounded-2xl p-5 mb-4">
+                        <div class="text-center flex-1">
+                            <div class="text-3xl font-extrabold font-display leading-tight mb-2 text-cyan-400">668</div>
+                            <div>Reviews</div>
+                        </div>
+                        <div class="font-extrabold text-gray-400 text-xl">VS</div>
+                        <div class="text-center flex-1">
+                            <div class="text-3xl font-extrabold font-display leading-tight mb-2 text-gray-400">2,100
+                            </div>
+                            <div>Reviews</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-5">
+                        <h3 class="text-xl text-white font-bold">Strategic Insight</h3>
+                    </div>
+                    <div class="relative h-[300px] w-full">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Ranking Factors -->
+        <section class="mb-20 animate-fade-in delay-500">
+            <div class="mb-8 border-l-4 border-cyan-400 pl-5">
+                <h2 class="text-3xl font-bold font-display mb-1">Ranking Factors</h2>
+                <p class="text-gray-400">무엇이 랭킹을 결정하는가? 데이터 상관관계 분석</p>
+            </div>
+            <div
+                class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                <div class="bg-purple-500/10 border border-purple-500/30 rounded-xl p-5 mb-5 flex gap-4 items-start">
+                    <div class="text-2xl">💡</div>
+                    <div>
+                        <h4 class="text-purple-400 mb-1 font-bold">Key Finding</h4>
+                        <p>데이터 분석 결과, 실제 랭킹과 가장 밀접한 지표는 <strong>'블로그 발행량'</strong>입니다. (상관계수 0.85)</p>
+                    </div>
+                </div>
+                <div class="relative h-[400px] w-full">
+                    <canvas id="rankingFactorChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Supply Analysis & Demographics -->
+        <section class="mb-20 animate-fade-in delay-500">
+            <div class="mb-8 border-l-4 border-cyan-400 pl-5">
+                <h2 class="text-3xl font-bold font-display mb-1">Supply & Demographics</h2>
+                <p class="text-gray-400">시장 공급 현황 및 타겟 인구 분석</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-5">
+                        <h3 class="text-xl text-white font-bold">Department Distribution</h3>
+                    </div>
+                    <div class="mb-5">
+                        <div class="flex justify-between mb-2">
+                            <span>Plastic Surgery (1st)</span>
+                            <span class="text-cyan-400">Dominant</span>
+                        </div>
+                        <div class="h-1.5 bg-white/10 rounded-full mt-2 overflow-hidden">
+                            <div class="h-full bg-cyan-400 rounded-full" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <div class="flex justify-between mb-2">
+                            <span>Dermatology (2nd)</span>
+                            <span>High Competition</span>
+                        </div>
+                        <div class="h-1.5 bg-white/10 rounded-full mt-2 overflow-hidden">
+                            <div class="h-full bg-purple-500 rounded-full" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span>Others</span>
+                            <span>Minor</span>
+                        </div>
+                        <div class="h-1.5 bg-white/10 rounded-full mt-2 overflow-hidden">
+                            <div class="h-full bg-gray-400 rounded-full" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-5">
+                        <h3 class="text-xl text-white font-bold">Target Demographics</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white/5 p-5 rounded-2xl text-center border border-white/5">
+                            <div class="text-3xl font-bold mb-1">20-30s</div>
+                            <span
+                                class="inline-block px-3 py-1.5 rounded-full bg-red-500/15 text-red-400 text-xs font-semibold mb-2">Primary
+                                Target</span>
+                            <p class="text-xs text-gray-400 mt-2">눈/코 성형 수요 집중<br>모바일 검색 85%</p>
+                        </div>
+                        <div class="bg-white/5 p-5 rounded-2xl text-center border border-white/5">
+                            <div class="text-3xl font-bold mb-1">40-50s</div>
+                            <span
+                                class="inline-block px-3 py-1.5 rounded-full bg-purple-500/15 text-purple-400 text-xs font-semibold mb-2">Secondary</span>
+                            <p class="text-xs text-gray-400 mt-2">리프팅/거상 수요<br>구매력 높음</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Client Deep Dive -->
+        <section class="mb-20 animate-fade-in delay-500">
+            <div class="mb-8 border-l-4 border-cyan-400 pl-5">
+                <h2 class="text-3xl font-bold font-display mb-1">Client Deep Dive</h2>
+                <p class="text-gray-400">제이준 성형외과 심층 분석 데이터</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="text-gray-400 text-sm uppercase tracking-wider">Sentiment</div>
+                    <div class="text-5xl font-extrabold font-display leading-tight mb-2 text-green-400">96.6%</div>
+                    <div class="text-sm text-gray-400 mt-1">긍정 리뷰 비율</div>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="text-gray-400 text-sm uppercase tracking-wider">New Patients</div>
+                    <div class="text-5xl font-extrabold font-display leading-tight mb-2 text-cyan-400">99.1%</div>
+                    <div class="text-sm text-gray-400 mt-1">신규 환자 유입률 (우수)</div>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="text-gray-400 text-sm uppercase tracking-wider">Returning</div>
+                    <div class="text-5xl font-extrabold font-display leading-tight mb-2 text-red-400">0.9%</div>
+                    <div class="text-sm text-gray-400 mt-1">재방문율 (개선 시급)</div>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="text-gray-400 text-sm uppercase tracking-wider">Views</div>
+                    <div class="text-5xl font-extrabold font-display leading-tight mb-2">155k</div>
+                    <div class="text-sm text-gray-400 mt-1">월간 조회수 (경쟁사 35%)</div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-5">
+                        <h3 class="text-xl text-white font-bold">SWOT Analysis</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-blue-500/10 rounded-xl">
+                            <h4 class="text-blue-400 mb-1 font-bold">Strengths</h4>
+                            <ul class="text-sm text-gray-300 list-disc pl-5">
+                                <li>높은 긍정 리뷰 비율</li>
+                                <li>신규 환자 유입 활발</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-red-500/10 rounded-xl">
+                            <h4 class="text-red-400 mb-1 font-bold">Weaknesses</h4>
+                            <ul class="text-sm text-gray-300 list-disc pl-5">
+                                <li>낮은 재방문율</li>
+                                <li>절대적인 조회수 부족</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-emerald-500/10 rounded-xl">
+                            <h4 class="text-emerald-400 mb-1 font-bold">Opportunities</h4>
+                            <ul class="text-sm text-gray-300 list-disc pl-5">
+                                <li>블로그 콘텐츠 강화</li>
+                                <li>재방문 유도 캠페인</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-amber-500/10 rounded-xl">
+                            <h4 class="text-amber-400 mb-1 font-bold">Threats</h4>
+                            <ul class="text-sm text-gray-300 list-disc pl-5">
+                                <li>상위 병원 독점 심화</li>
+                                <li>경쟁 비용 상승</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-5">
+                        <h3 class="text-xl text-white font-bold">Review Sentiment</h3>
+                    </div>
+                    <div class="relative h-[300px] w-full">
+                        <canvas id="sentimentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. Strategic Keywords -->
+        <section class="mb-20 animate-fade-in delay-500">
+            <div class="mb-8 border-l-4 border-cyan-400 pl-5">
+                <h2 class="text-3xl font-bold font-display mb-1">Strategic Keywords</h2>
+                <p class="text-gray-400">성장을 위한 우선순위 공략 키워드 (TOP 5)</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                    class="bg-white/5 border border-white/10 rounded-2xl p-5 cursor-pointer hover:border-cyan-400 hover:bg-blue-500/5 transition-all duration-300">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold">#눈성형</h3>
+                        <span
+                            class="inline-block px-3 py-1.5 rounded-full bg-blue-500/15 text-blue-400 text-xs font-semibold">Priority
+                            1</span>
+                    </div>
+                    <div class="my-4">
+                        <div class="flex justify-between text-sm text-gray-400">
+                            <span>Volume</span>
+                            <span>626 / month</span>
+                        </div>
+                        <div class="h-1.5 bg-white/10 rounded-full mt-2 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full"
+                                style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400">가장 높은 검색량과 수요. 전문성 강조 콘텐츠 필수.</p>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-2xl p-5 cursor-pointer hover:border-cyan-400 hover:bg-blue-500/5 transition-all duration-300">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold">#코성형</h3>
+                        <span
+                            class="inline-block px-3 py-1.5 rounded-full bg-blue-500/15 text-blue-400 text-xs font-semibold">Priority
+                            2</span>
+                    </div>
+                    <div class="my-4">
+                        <div class="flex justify-between text-sm text-gray-400">
+                            <span>Volume</span>
+                            <span>414 / month</span>
+                        </div>
+                        <div class="h-1.5 bg-white/10 rounded-full mt-2 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full"
+                                style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400">꾸준한 수요. 전후 사진 중심의 리뷰 콘텐츠 추천.</p>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-2xl p-5 cursor-pointer hover:border-cyan-400 hover:bg-blue-500/5 transition-all duration-300">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold">#리프팅</h3>
+                        <span
+                            class="inline-block px-3 py-1.5 rounded-full bg-purple-500/15 text-purple-400 text-xs font-semibold">Priority
+                            3</span>
+                    </div>
+                    <div class="my-4">
+                        <div class="flex justify-between text-sm text-gray-400">
+                            <span>Volume</span>
+                            <span>295 / month</span>
+                        </div>
+                        <div class="h-1.5 bg-white/10 rounded-full mt-2 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full"
+                                style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400">중장년층 타겟. 시술 안전성과 효과 강조.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. Next Month Forecast -->
+        <section class="mb-20 animate-fade-in delay-700">
+            <div class="mb-8 border-l-4 border-cyan-400 pl-5">
+                <h2 class="text-3xl font-bold font-display mb-1">Next Month Forecast (Dec 2025)</h2>
+                <p class="text-gray-400">12월 시즌 트렌드 예측 및 실행 계획</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-5">
+                        <h3 class="text-xl text-white font-bold">Keyword Trend Forecast</h3>
+                    </div>
+                    <div class="relative h-[300px] w-full">
+                        <canvas id="forecastChart"></canvas>
+                    </div>
+                </div>
+                <div
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-400/30 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-5">
+                        <h3 class="text-xl text-white font-bold">Action Plan</h3>
+                    </div>
+                    <ul class="list-none">
+                        <li class="py-4 border-b border-white/10 flex items-center">
+                            <span class="mr-4 text-xl">🚀</span>
+                            <div>
+                                <strong>가슴성형 콘텐츠 비중 확대 (40%)</strong>
+                                <p class="text-sm text-gray-400">겨울 시즌/방학 대비 수요 급증 예상</p>
+                            </div>
+                        </li>
+                        <li class="py-4 border-b border-white/10 flex items-center">
+                            <span class="mr-4 text-xl">📉</span>
+                            <div>
+                                <strong>눈/코 성형 유지 및 방어</strong>
+                                <p class="text-sm text-gray-400">경쟁 심화 예상, 차별화된 후기 집중</p>
+                            </div>
+                        </li>
+                        <li class="py-4 flex items-center">
+                            <span class="mr-4 text-xl">✍️</span>
+                            <div>
+                                <strong>진료만족 키워드 보강 (+35건)</strong>
+                                <p class="text-sm text-gray-400">신뢰도 확보를 위한 긍정 리뷰 확산</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <site-footer theme="dark" base-path=".."></site-footer>
+    </div>
+
+    <script>
+        // Chart Defaults
+        Chart.defaults.color = '#9ca3af';
+        Chart.defaults.borderColor = 'rgba(255, 255, 255, 0.1)';
+        Chart.defaults.font.family = "'Inter', sans-serif";
+
+        // 1. Radar Chart (Positioning)
+        new Chart(document.getElementById('radarChart'), {
+            type: 'radar',
+            data: {
+                labels: ['Ranking', 'Reviews', 'Specialists', 'Views', 'Blog Vol', 'Satisfaction'],
+                datasets: [{
+                    label: 'My Hospital',
+                    data: [60, 40, 50, 30, 40, 95],
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    borderColor: '#3b82f6',
+                    pointBackgroundColor: '#3b82f6'
+                }, {
+                    label: 'Top 10 Avg',
+                    data: [90, 85, 80, 85, 80, 85],
+                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                    borderColor: '#6b7280',
+                    pointBackgroundColor: '#6b7280'
+                }]
+            },
+            options: {
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        pointLabels: { color: '#fff' },
+                        ticks: { display: false }
+                    }
+                },
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+
+        // 2. Ranking Factors Chart
+        new Chart(document.getElementById('rankingFactorChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Blog Volume', 'Visitor Reviews', 'Blog Reviews', 'Replies'],
+                datasets: [{
+                    label: 'Correlation with Ranking',
+                    data: [0.85, 0.65, 0.55, 0.3],
+                    backgroundColor: [
+                        '#8b5cf6', // Purple (High)
+                        'rgba(139, 92, 246, 0.6)',
+                        'rgba(139, 92, 246, 0.4)',
+                        'rgba(139, 92, 246, 0.2)'
+                    ],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true, max: 1 } }
+            }
+        });
+
+        // 3. Sentiment Chart (Doughnut)
+        new Chart(document.getElementById('sentimentChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Positive', 'Negative', 'Neutral'],
+                datasets: [{
+                    data: [96.6, 0, 3.4],
+                    backgroundColor: ['#4ade80', '#f87171', '#9ca3af'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutout: '70%',
+                plugins: { legend: { position: 'right' } }
+            }
+        });
+
+        // 4. Forecast Chart (Line)
+        new Chart(document.getElementById('forecastChart'), {
+            type: 'line',
+            data: {
+                labels: ['Sep', 'Oct', 'Nov', 'Dec (Est)'],
+                datasets: [{
+                    label: 'Breast Surgery',
+                    data: [12, 11, 15, 25],
+                    borderColor: '#f472b6',
+                    tension: 0.4
+                }, {
+                    label: 'Eye Surgery',
+                    data: [97, 60, 26, 20],
+                    borderColor: '#60a5fa',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+    </script>
+</body>
+
+</html>

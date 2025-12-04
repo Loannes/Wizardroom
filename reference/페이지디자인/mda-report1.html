@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDA 리포트 - Medical Data AI Report | WizardRoom</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta name="description" content="탑티어 병원들의 운영 전략을 데이터로 분석. 우리 병원만을 위한 맞춤 마케팅 전략을 받아보세요.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Pretendard:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="../js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="antialiased selection:bg-purple-100 selection:text-purple-900 bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="../index.html" class="flex-shrink-0 cursor-pointer">
+                    <span class="font-display text-2xl font-bold tracking-tight text-black">Wizard<span
+                            class="text-purple-600">Room</span></span>
+                </a>
+                <a href="../index.html" class="text-sm font-medium text-gray-600 hover:text-black transition-colors">←
+                    Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-blue-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center px-4 py-2 rounded-full border border-purple-200 bg-purple-50 text-purple-700 text-sm font-medium mb-6">
+                    <span class="flex w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
+                    AI & Data Intelligence
+                </div>
+                <h1 class="text-4xl md:text-6xl font-display font-bold tracking-tight mb-8 text-black">
+                    <span class="text-gradient">병원 마케팅</span>, 아직도 대행사에 <br>
+                    의존하고 있으신가요?
+                </h1>
+
+                <div class="max-w-4xl mx-auto mb-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="glass-card p-6 rounded-lg border-l-4 border-purple-500">
+                            <div class="text-lg font-bold text-black mb-2">우리 병원 마케팅,</div>
+                            <div class="text-2xl font-bold text-gradient mb-3">제대로 하고 있나요?</div>
+                            <p class="text-sm text-gray-600">마케팅 비용은 쓰는데<br>효과를 정확히 모르시는 분들을 위해</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-lg border-l-4 border-blue-500">
+                            <div class="text-lg font-bold text-black mb-2">마케팅을 시작하고 싶은데,</div>
+                            <div class="text-2xl font-bold text-gradient mb-3">어디부터 해야 할까요?</div>
+                            <p class="text-sm text-gray-600">뭐부터 해야 할지<br>막막하신 분들을 위해</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed">
+                    <span class="font-bold text-black">5,000개 병원 데이터</span>,
+                    <span class="font-bold text-black">430,000개 리뷰 데이터</span>,
+                    <span class="font-bold text-black">230,000개 블로그 데이터</span>를<br class="hidden md:block">
+                    <span class="font-bold text-black">AI로 분석</span>하여
+                    앞서가는 병원들의 운영 전략을 분석하여,<br class="hidden md:block">
+                    <span class="text-purple-600 font-bold">데이터에 기반한 근거 있는 맞춤 전략</span>을 제공합니다.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#get-report"
+                        class="rounded-full bg-black px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-gray-800 hover:shadow-xl transition-all">
+                        전략 리포트 더 알아보기
+                    </a>
+                    <a href="#benchmark"
+                        class="rounded-full border-2 border-purple-600 px-8 py-4 text-base font-semibold text-purple-600 hover:bg-purple-50 transition-all">
+                        탑티어 전략 보기
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="glass-card p-6 rounded-lg text-center">
+                    <div class="text-4xl font-bold text-gradient mb-2">5,000개</div>
+                    <div class="text-sm text-gray-600">병원 데이터</div>
+                </div>
+                <div class="glass-card p-6 rounded-lg text-center">
+                    <div class="text-4xl font-bold text-gradient mb-2">430,000개</div>
+                    <div class="text-sm text-gray-600">리뷰 데이터</div>
+                </div>
+                <div class="glass-card p-6 rounded-lg text-center">
+                    <div class="text-4xl font-bold text-gradient mb-2">230,000개</div>
+                    <div class="text-sm text-gray-600">블로그 데이터</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold mb-6 text-black">
+                    이런 고민, <span class="text-gradient">하고 계시죠?</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Persona A -->
+                <div class="space-y-6">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-3">
+                            <span class="text-3xl">🤔</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-black">마케팅 효과를 확인하고 싶은 원장님</h3>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-red-500">
+                        <p class="text-gray-700 font-medium mb-2">💸 "마케팅 비용은 계속 늘어나는데..."</p>
+                        <p class="text-sm text-gray-600">블로그 외주비, 광고비, 리뷰 관리비... 매달 수백만원을 쓰고 있지만 정확히 어떤 효과가 있는지 모르겠어요.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-orange-500">
+                        <p class="text-gray-700 font-medium mb-2">📊 "경쟁 병원과 비교하면 어떨까?"</p>
+                        <p class="text-sm text-gray-600">우리가 잘하고 있는 건지, 뒤처진 건지 알 수가 없어요. 상위권 병원들은 뭘 하고 있는 걸까요?</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-yellow-500">
+                        <p class="text-gray-700 font-medium mb-2">🎯 "무엇을 개선해야 할까?"</p>
+                        <p class="text-sm text-gray-600">블로그를 늘려야 할까요? 리뷰 관리를 강화해야 할까요? 우선순위를 모르겠어요.</p>
+                    </div>
+                </div>
+
+                <!-- Persona B -->
+                <div class="space-y-6">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-3">
+                            <span class="text-3xl">🤷</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-black">마케팅을 시작하려는 원장님</h3>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-blue-500">
+                        <p class="text-gray-700 font-medium mb-2">❓ "뭐부터 해야 하지?"</p>
+                        <p class="text-sm text-gray-600">마케팅을 해야 한다는 건 아는데, 블로그? 광고? 리뷰? 무엇부터 시작해야 할지 막막해요.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-cyan-500">
+                        <p class="text-gray-700 font-medium mb-2">🎯 "우리 병원에 맞는 전략은 뭘까?"</p>
+                        <p class="text-sm text-gray-600">일반적인 마케팅 방법 말고, 우리 병원 규모와 지역 상황에 딱 맞는 맞춤 전략이 필요해요.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-indigo-500">
+                        <p class="text-gray-700 font-medium mb-2">🏆 "성공한 병원들은?"</p>
+                        <p class="text-sm text-gray-600">상위권 병원들은 어떤 전략을 쓰는지, 우리도 따라할 수 있는 방법은 없을까요?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-purple-600 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-600 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-12">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-200 to-blue-200">MDA 리포트</span>
+                <span class="block text-sm font-normal text-gray-400 mt-2 tracking-widest uppercase">Medical Data AI
+                    Report</span>
+            </h2>
+
+            <div class="space-y-10 text-lg leading-relaxed text-gray-300 font-light">
+                <div>
+                    <p class="mb-4">
+                        병원의 운영은 ‘감’이 아니라<br>
+                        <span class="text-white font-semibold">환자의 이야기, 운영 데이터, 그리고 경쟁 환경</span>을<br>
+                        어떻게 해석하느냐에 달려 있습니다.
+                    </p>
+                    <p class="text-base text-gray-400">
+                        우리는 병원이 감(感)이 아닌 데이터 기반 전략으로 올바르게 성장해야 한다고 믿습니다.<br>
+                        병원의 올바른 성장은 결국 환자, 그리고 지역사회 모두의 안녕과 직결되기 때문입니다.
+                    </p>
+                </div>
+
+                <div class="w-12 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto opacity-50"></div>
+
+                <div>
+                    <p class="mb-4">
+                        WizardRoom의 병원 마케팅 서비스 <span class="text-white font-bold">Medibb(메디브)</span>는<br>
+                        수만~수십만 건의 데이터를 AI로 분석·해석해<br>
+                        클라이언트 병원에 실제로 적용 가능한 인사이트로 정제합니다.
+                    </p>
+                    <p class="text-base text-gray-400">
+                        단순한 ‘감’이 아니라, <span class="text-white font-semibold">지속적으로 성장하는 병원들의 실제 데이터 패턴</span>을 기반으로<br>
+                        전략을 설계하고 업데이트합니다.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <p class="text-xl text-white font-medium">
+                        "이 철학을 담아 우리는 <span class="text-purple-300">MDA 리포트</span>를 만들었습니다."
+                    </p>
+                    <p class="mt-4 text-gray-300 text-base">
+                        병원이 현재 어디에 서 있으며, 앞으로 어떤 방향으로 나아가야 하는지를<br>
+                        단 한 번의 리포트로 명확하게 이해할 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution: Top-tier Benchmarking -->
+    <section id="benchmark" class="py-20 bg-gradient-to-br from-gray-50 to-purple-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold mb-6 text-black">
+                    <span class="text-gradient">탑티어 병원 벤치마킹</span>으로<br>
+                    해답을 찾았습니다
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    AI와 데이터로 상위 병원들의 운영 전략을 분석하고,<br class="hidden md:block">
+                    그들의 성공 비밀을 귀하의 병원에 맞게 적용합니다.
+                </p>
+            </div>
+
+            <!-- AI Process -->
+            <div class="mb-16">
+                <div class="glass-card p-10 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-black mb-8 text-center">AI & 데이터 분석 프로세스</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                                1
+                            </div>
+                            <h4 class="font-bold text-black mb-2">데이터 수집</h4>
+                            <p class="text-sm text-gray-600">지역 내 294개 병원의 운영 데이터 자동 수집</p>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                                2
+                            </div>
+                            <h4 class="font-bold text-black mb-2">AI 분석</h4>
+                            <p class="text-sm text-gray-600">상위 10개 병원의 성공 패턴을 AI로 분석</p>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                                3
+                            </div>
+                            <h4 class="font-bold text-black mb-2">인사이트 발견</h4>
+                            <p class="text-sm text-gray-600">랭킹 결정 요인과 효과적 전략 도출</p>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-gradient-to-br from-teal-500 to-green-500 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                                4
+                            </div>
+                            <h4 class="font-bold text-black mb-2">맞춤 전략</h4>
+                            <p class="text-sm text-gray-600">우리 병원만을 위한 실행 계획 생성</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top-tier Hospital Insights -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="glass-card p-8 rounded-lg border-2 border-purple-300">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center mr-4 text-white text-2xl">
+                            🏆
+                        </div>
+                        <h3 class="text-xl font-bold text-black">1위 병원의 비밀</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-3 bg-purple-50 rounded">
+                            <span class="text-gray-700">블로그 발행량</span>
+                            <span class="text-purple-600 font-bold text-lg">월 110건</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-purple-50 rounded">
+                            <span class="text-gray-700">답글 관리율</span>
+                            <span class="text-purple-600 font-bold text-lg">97.7%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-purple-50 rounded">
+                            <span class="text-gray-700">전문의 비율</span>
+                            <span class="text-purple-600 font-bold text-lg">50%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-lg border-2 border-blue-300">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center mr-4 text-white text-2xl">
+                            📊
+                        </div>
+                        <h3 class="text-xl font-bold text-black">상위 10위 평균</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="text-gray-700">블로그 발행량</span>
+                            <span class="text-blue-600 font-bold text-lg">월 18건</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="text-gray-700">방문자 리뷰</span>
+                            <span class="text-blue-600 font-bold text-lg">589.7개</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="text-gray-700">블로그 리뷰</span>
+                            <span class="text-blue-600 font-bold text-lg">4,460.7개</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-purple-600 to-blue-600 p-8 rounded-2xl text-white text-center">
+                <h3 class="text-2xl font-bold mb-4">🎯 핵심 발견: 블로그 발행량이 랭킹을 결정합니다</h3>
+                <p class="text-purple-100 mb-6">
+                    294개 병원 데이터를 AI로 분석한 결과, <span class="text-yellow-300 font-bold">블로그 발행량</span>이<br
+                        class="hidden md:block">
+                    실제 랭킹과 가장 높은 상관관계(평균 0.6단계 차이)를 보였습니다.
+                </p>
+                <div class="inline-block bg-white text-purple-600 px-6 py-3 rounded-full font-bold">
+                    이 인사이트만으로도 전략이 달라집니다
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-Step Report Journey -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold mb-6 text-black">
+                    MDA 리포트로<br>
+                    <span class="text-gradient">3단계 여정</span>을 시작하세요
+                </h2>
+                <p class="text-xl text-gray-600">현재 위치 파악 → 성공 전략 학습 → 맞춤 실행 계획</p>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-2xl mr-6 shadow-lg">
+                        STEP<br>1
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-black mb-2">현재 위치 파악</h3>
+                        <p class="text-gray-600">우리 병원이 지금 어디에 있는지 정확히 알 수 있습니다</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-card p-6 rounded-lg">
+                        <div class="text-purple-600 font-bold mb-2">섹션 1</div>
+                        <h4 class="text-lg font-bold text-black mb-3">지역 시장 경쟁 개요</h4>
+                        <p class="text-sm text-gray-600 mb-4">294개 병원 중 우리의 위치, 시장 규모와 경쟁 밀도</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">대시보드</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg">
+                        <div class="text-purple-600 font-bold mb-2">섹션 2</div>
+                        <h4 class="text-lg font-bold text-black mb-3">상위 경쟁 병원 현황</h4>
+                        <p class="text-sm text-gray-600 mb-4">상위 10개 병원 벤치마킹, 1위 병원 심층 분석</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">랭킹 테이블</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg">
+                        <div class="text-purple-600 font-bold mb-2">섹션 3</div>
+                        <h4 class="text-lg font-bold text-black mb-3">병원 포지셔닝 진단</h4>
+                        <p class="text-sm text-gray-600 mb-4">내 병원 vs 시장 평균 격차 분석, 강점/약점 파악</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">VS 카드</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-2xl mr-6 shadow-lg">
+                        STEP<br>2
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-black mb-2">성공 전략 분석</h3>
+                        <p class="text-gray-600">탑티어 병원들이 어떻게 성공했는지 배울 수 있습니다</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-card p-6 rounded-lg border-2 border-blue-300">
+                        <div class="flex items-center mb-2">
+                            <div class="text-blue-600 font-bold mr-2">섹션 4</div>
+                            <span
+                                class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-bold">핵심</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-black mb-3">랭킹 결정 요인 분석</h4>
+                        <p class="text-sm text-gray-600 mb-4">블로그 발행량이 0.6단계 차이로 가장 정확한 예측 변수</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">레이더 차트</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg">
+                        <div class="text-blue-600 font-bold mb-2">섹션 5-7</div>
+                        <h4 class="text-lg font-bold text-black mb-3">시장 & 리뷰 분석</h4>
+                        <p class="text-sm text-gray-600 mb-4">진료과목별 경쟁도, 인구 수요, 리뷰 상관관계</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">차트</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg">
+                        <div class="text-blue-600 font-bold mb-2">섹션 8-9</div>
+                        <h4 class="text-lg font-bold text-black mb-3">마케팅 트렌드 & 키워드</h4>
+                        <p class="text-sm text-gray-600 mb-4">3개월 블로그 추이, 상위 노출 키워드 전략</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">워드 클라우드</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div>
+                <div class="flex items-center mb-8">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white font-bold text-2xl mr-6 shadow-lg">
+                        STEP<br>3
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-black mb-2">맞춤 실행 전략</h3>
+                        <p class="text-gray-600">우리 병원만을 위한 구체적 실행 계획을 받을 수 있습니다</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass-card p-6 rounded-lg border-2 border-pink-300">
+                        <div class="text-pink-600 font-bold mb-2">섹션 10</div>
+                        <h4 class="text-lg font-bold text-black mb-3">클라이언트 심층 분석</h4>
+                        <p class="text-sm text-gray-600 mb-4">SWOT 분석 및 종합 진단</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg border-2 border-pink-300">
+                        <div class="text-pink-600 font-bold mb-2">섹션 11</div>
+                        <h4 class="text-lg font-bold text-black mb-3">랭킹 변화 추이</h4>
+                        <p class="text-sm text-gray-600 mb-4">30일 랭킹 변화 분석</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg border-2 border-pink-300">
+                        <div class="text-pink-600 font-bold mb-2">섹션 12</div>
+                        <h4 class="text-lg font-bold text-black mb-3">우선순위 키워드</h4>
+                        <p class="text-sm text-gray-600 mb-4">TOP 5 키워드 전략</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-lg border-2 border-pink-300">
+                        <div class="flex items-center mb-2">
+                            <div class="text-pink-600 font-bold mr-2">섹션 13</div>
+                            <span
+                                class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-bold">AI</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-black mb-3">다음 달 예측</h4>
+                        <p class="text-sm text-gray-600 mb-4">키워드 트렌드 예측</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Sections Showcase -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold mb-6 text-black">
+                    리포트 <span class="text-gradient">핵심 미리보기</span>
+                </h2>
+            </div>
+
+            <!-- Section 4: Ranking Factors -->
+            <div class="mb-16">
+                <div
+                    class="glass-card p-10 rounded-lg bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-300">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl mr-4 shadow-lg">
+                            4
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-black">랭킹 결정 요인 분석</h3>
+                            <p class="text-gray-600">AI가 찾아낸 성공의 비밀</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-purple-200 pt-6">
+                        <div class="bg-white p-8 rounded-lg shadow-lg mb-6">
+                            <h4 class="text-xl font-bold text-black mb-4 flex items-center">
+                                <span class="text-3xl mr-3">🎯</span>
+                                발견: 블로그 발행량이 랭킹의 핵심입니다
+                            </h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <p class="text-gray-700 mb-4">
+                                        상위 7개 병원의 4가지 지표를 AI로 분석한 결과:
+                                    </p>
+                                    <div class="space-y-3">
+                                        <div
+                                            class="flex items-center justify-between p-3 bg-gradient-to-r from-purple-100 to-blue-100 rounded border-2 border-purple-400">
+                                            <span class="text-black font-bold">블로그 발행량 ⭐</span>
+                                            <span class="text-purple-600 font-bold">랭킹 차이 0.6단계</span>
+                                        </div>
+                                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                                            <span class="text-gray-700">블로그 리뷰 수</span>
+                                            <span class="text-gray-500">랭킹 차이 3단계</span>
+                                        </div>
+                                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                                            <span class="text-gray-700">방문자 리뷰 수</span>
+                                            <span class="text-gray-500">랭킹 차이 4단계</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-br from-purple-600 to-blue-600 p-6 rounded-lg text-white">
+                                    <h5 class="font-bold text-xl mb-4">💡 이것이 의미하는 것은</h5>
+                                    <div class="space-y-3 text-sm">
+                                        <p>리뷰를 많이 받는 것도 중요하지만,</p>
+                                        <p class="font-bold text-yellow-300 text-lg">블로그를 꾸준히 발행하는 것이 랭킹에 더 직접적인 영향을
+                                            미칩니다.</p>
+                                        <div class="border-t border-purple-400 my-4"></div>
+                                        <p>상위 10위권 병원들은 평균 <span class="text-yellow-300 font-bold">월 18건</span>의 블로그를
+                                            발행합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 6: Demographics -->
+            <div class="mb-16">
+                <div class="glass-card p-10 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+                            6
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-black">인구 및 수요 분석</h3>
+                            <p class="text-gray-600">연령대별 타겟 전략 수립</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 pt-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-purple-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-black mb-4 flex items-center">
+                                    <span class="text-2xl mr-2">👥</span>
+                                    50대 이상 (39.2%)
+                                </h4>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-700">추천 키워드</span>
+                                        <span class="font-bold text-purple-600">눈성형, 리프팅, 거상</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-700">전략 우선순위</span>
+                                        <span
+                                            class="px-2 py-1 bg-purple-600 text-white rounded text-xs font-bold">1순위</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-blue-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-black mb-4 flex items-center">
+                                    <span class="text-2xl mr-2">👥</span>
+                                    20~30대 (25.8%)
+                                </h4>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-700">추천 키워드</span>
+                                        <span class="font-bold text-blue-600">코성형, 눈성형</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-700">전략 우선순위</span>
+                                        <span
+                                            class="px-2 py-1 bg-blue-600 text-white rounded text-xs font-bold">2순위</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded">
+                            <p class="text-gray-800 text-sm">
+                                <span class="font-bold text-black">데이터 기반 타겟팅:</span>
+                                지역 인구 분포와 블로그 키워드 빈도를 교차 분석하여 가장 효과적인 타겟 연령대와 키워드를 제안합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 13: Forecast -->
+            <div>
+                <div class="glass-card p-10 rounded-lg border-2 border-blue-300">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl mr-4">
+                            13
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-black">다음 달 키워드 예측</h3>
+                            <p class="text-gray-600">AI 기반 트렌드 예측</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 pt-6">
+                        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 rounded-lg text-white mb-6">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🔮</span>
+                                <h4 class="text-xl font-bold">2025년 12월 예측</h4>
+                            </div>
+                            <p class="text-indigo-100 mb-4">최근 3개월(9, 10, 11월) 데이터를 AI로 분석한 결과:</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-white/20 p-4 rounded">
+                                    <div class="text-yellow-300 font-bold mb-2">📈 상승 예측</div>
+                                    <div class="text-sm">가슴성형 (12건→11건)</div>
+                                    <div class="text-sm">탈모 (1건→1건)</div>
+                                </div>
+                                <div class="bg-white/20 p-4 rounded">
+                                    <div class="text-red-300 font-bold mb-2">📉 하락 예측</div>
+                                    <div class="text-sm">눈성형 (97건→26건)</div>
+                                    <div class="text-sm">코성형 (72건→17건)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-black mb-3">💡 맞춤 전략 제안</h4>
+                            <p class="text-sm text-gray-700">
+                                12월 시장 트렌드와 귀하의 병원 현황을 고려한 키워드 비중:
+                                <span class="font-bold text-purple-600">가슴성형 40%, 탈모 25%</span> 권장
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Cases -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold mb-6 text-black">
+                    실제 <span class="text-gradient">활용 사례</span>
+                </h2>
+                <p class="text-xl text-gray-600">리포트 기반 전략 실행으로 성과를 낸 병원들</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Case 1 -->
+                <div class="glass-card p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                            <span class="text-2xl">👨‍⚕️</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-black">김** 원장님</div>
+                            <div class="text-sm text-gray-600">강남 ○○성형외과</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <div class="text-sm text-gray-600 mb-2">Before (리포트 전)</div>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="bg-red-50 p-3 rounded text-center">
+                                    <div class="text-red-600 font-bold">23위</div>
+                                    <div class="text-xs text-gray-600">랭킹</div>
+                                </div>
+                                <div class="bg-red-50 p-3 rounded text-center">
+                                    <div class="text-red-600 font-bold">월 5건</div>
+                                    <div class="text-xs text-gray-600">블로그</div>
+                                </div>
+                                <div class="bg-red-50 p-3 rounded text-center">
+                                    <div class="text-red-600 font-bold">2%</div>
+                                    <div class="text-xs text-gray-600">재방문율</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="text-sm text-gray-600 mb-2">After (3개월 후)</div>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="bg-green-50 p-3 rounded text-center">
+                                    <div class="text-green-600 font-bold">12위</div>
+                                    <div class="text-xs text-gray-600">랭킹</div>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded text-center">
+                                    <div class="text-green-600 font-bold">월 20건</div>
+                                    <div class="text-xs text-gray-600">블로그</div>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded text-center">
+                                    <div class="text-green-600 font-bold">8%</div>
+                                    <div class="text-xs text-gray-600">재방문율</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-700 italic border-l-4 border-purple-500 pl-4">
+                        "블로그 발행량이 핵심이라는 걸 몰랐습니다. 전략을 바꾼 후 3개월 만에 23위에서 12위로 올랐어요."
+                    </p>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="glass-card p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                            <span class="text-2xl">👨‍⚕️</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-black">이** 원장님</div>
+                            <div class="text-sm text-gray-600">서초 ○○의원</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <div class="text-sm text-gray-600 mb-2">Before (리포트 전)</div>
+                            <div class="bg-red-50 p-4 rounded">
+                                <p class="text-sm text-gray-700">마케팅을 어디서부터 시작해야 할지 몰라 방치</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="text-sm text-gray-600 mb-2">After (6개월 후)</div>
+                            <div class="bg-green-50 p-4 rounded space-y-2">
+                                <p class="text-sm text-gray-700">✓ 우선순위 키워드 TOP 5 집중</p>
+                                <p class="text-sm text-gray-700">✓ 연령대별 타겟 전략 수립</p>
+                                <p class="text-sm text-gray-700">✓ 6개월 만에 <span class="font-bold text-green-600">15위
+                                        진입</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-700 italic border-l-4 border-blue-500 pl-4">
+                        "무엇부터 해야 할지 막막했는데, 리포트가 우선순위를 명확히 알려주었어요. 이제 데이터로 의사결정합니다."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="get-report"
+        class="py-20 bg-gradient-to-br from-purple-600 via-purple-700 to-blue-700 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 relative">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-white">
+                    지금 바로<br>
+                    <span class="text-yellow-300">무료 진단 리포트</span>를 받아보세요
+                </h2>
+                <p class="text-xl text-purple-100 mb-8">
+                    탑티어 병원들의 전략을 분석하고,<br class="hidden md:block">
+                    우리 병원만을 위한 맞춤 실행 계획을 제공합니다.
+                </p>
+            </div>
+
+            <div class="glass-card bg-white p-10 rounded-2xl shadow-2xl max-w-2xl mx-auto">
+                <div class="text-center mb-8">
+                    <div
+                        class="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-bold mb-4">
+                        선착순 10개 병원 한정
+                    </div>
+                    <div class="text-5xl font-bold text-black mb-2">
+                        <span class="text-gray-400 line-through text-3xl">₩500,000</span>
+                        <span class="text-gradient ml-4">무료</span>
+                    </div>
+                    <p class="text-gray-600">완전 무료 진단 리포트</p>
+                </div>
+
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-gray-700">294개 병원 vs 우리 병원 비교 분석 (PDF)</span>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-gray-700">탑티어 병원 벤치마킹 리포트 (13개 섹션)</span>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-gray-700">AI 기반 다음 달 키워드 예측</span>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-gray-700">맞춤 실행 전략 체크리스트</span>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-gray-700">1:1 전문가 화상 컨설팅 (30분)</span>
+                    </div>
+                </div>
+
+                <a href="../index.html#contact"
+                    class="block w-full text-center rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-10 py-5 text-lg font-bold text-white shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300">
+                    지금 바로 무료로 받기 →
+                </a>
+                <p class="text-center text-sm text-gray-500 mt-4">신청 후 24시간 내 리포트 발송</p>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-purple-100 text-sm">
+                    💡 궁금한 점이 있으신가요? <a href="../index.html#contact"
+                        class="text-yellow-300 font-bold underline">문의하기</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 bg-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center">
+                <span class="font-display text-xl font-bold text-black">Wizard<span
+                        class="text-purple-600">Room</span></span>
+                <p class="text-gray-500 text-sm mt-4">
+                    We create magical changes with AI & Data.
+                </p>
+                <p class="text-gray-400 text-sm mt-6">© 2025 WizardRoom Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

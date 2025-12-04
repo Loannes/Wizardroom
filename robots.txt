@@ -1,0 +1,26 @@
+# 모든 검색엔진 로봇 허용
+User-agent: *
+Allow: /
+
+# OpenAI (ChatGPT) 봇 허용
+User-agent: GPTBot
+Allow: /
+
+# Anthropic (Claude) 봇 허용
+User-agent: ClaudeBot
+Allow: /
+
+# Google (Gemini/Bard) 확장 봇 허용
+User-agent: Google-Extended
+Allow: /
+
+# 네이버 검색 로봇
+User-agent: Yeti
+Allow: /
+
+# 다음/카카오 검색 로봇
+User-agent: Daumoa
+Allow: /
+
+# 사이트맵 위치 지정
+Sitemap: https://wizardroom.co.kr/sitemap.xml

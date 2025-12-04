@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDA Report - 2. 경쟁 병원 분석 | WizardRoom</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&family=Pretendard:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind-config.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/mda-report.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-black text-white font-sans antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-900/20 rounded-full blur-[120px] animate-pulse-slow">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-900/20 rounded-full blur-[120px] animate-pulse-slow delay-1000">
+        </div>
+        <div
+            class="absolute top-[20%] right-[10%] w-[20%] h-[20%] bg-cyan-900/10 rounded-full blur-[80px] animate-float">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+                    W</div>
+                <span
+                    class="font-display font-bold text-xl tracking-tight text-white group-hover:text-cyan-400 transition-colors">WizardRoom</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../index.html"
+                    class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="#" class="text-sm font-medium text-white">Reports</a>
+                <a href="../index.html#contact"
+                    class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto">
+
+            <!-- Header -->
+            <header class="mb-16 text-center animate-fade-in-up">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-sm font-medium mb-6 hover:bg-white/10 transition-colors cursor-default">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    Market Data Analysis Report
+                </div>
+                <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">경쟁
+                        병원 분석</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    상위 1~7위 병원 심층 벤치마킹 및 랭킹 결정 요인 분석
+                </p>
+            </header>
+
+            <!-- Report Navigation Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16 animate-fade-in delay-100">
+                <a href="mda-report-1.html"
+                    class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white transition-all">
+                    1. 지역 시장 분석
+                </a>
+                <a href="mda-report-2.html"
+                    class="px-6 py-3 rounded-xl bg-cyan-500/20 border border-cyan-500/50 text-cyan-400 font-bold transition-all shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+                    2. 경쟁 병원 분석
+                </a>
+                <a href="mda-report-3.html"
+                    class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white transition-all">
+                    3. 클라이언트 진단
+                </a>
+                <a href="mda-report-4.html"
+                    class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white transition-all">
+                    4. 전략 제안
+                </a>
+            </div>
+
+            <!-- 1. 1위 신상성형외과의원 분석 -->
+            <section class="mb-24 animate-fade-in delay-200">
+                <div class="mb-10 border-l-4 border-cyan-400 pl-5">
+                    <h2 class="text-3xl font-bold font-display mb-2 text-white">1. 1위 신상성형외과의원 심층 분석</h2>
+                    <p class="text-gray-400">지역 1위 병원의 경쟁력 요인 해부</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                    <!-- Basic Info -->
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-xl font-bold text-white mb-4">기본 현황</h4>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-black/20 p-4 rounded-xl">
+                                <div class="text-gray-400 text-xs">방문자 리뷰</div>
+                                <div class="text-2xl font-bold text-white">673건</div>
+                            </div>
+                            <div class="bg-black/20 p-4 rounded-xl">
+                                <div class="text-gray-400 text-xs">블로그 리뷰</div>
+                                <div class="text-2xl font-bold text-cyan-400">4,521건</div>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-3">의료 전문성 평가</h4>
+                        <ul class="space-y-3 text-sm text-gray-300">
+                            <li class="flex justify-between border-b border-white/5 pb-2">
+                                <span>등록 진료과목 수</span>
+                                <span class="font-bold text-white">4개</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/5 pb-2">
+                                <span>전문의 진료과 비율</span>
+                                <span class="font-bold text-white">50.0% (2/4)</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/5 pb-2">
+                                <span>진료과 커버리지율</span>
+                                <span class="font-bold text-white">0.5</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 p-4 bg-blue-500/10 rounded-xl text-sm text-gray-300">
+                            "전문의 비율 50%로 중간 수준이나, 안정적인 진료 역량을 보유하고 있습니다."
+                        </div>
+                    </div>
+
+                    <!-- Ranking Trend -->
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-xl font-bold text-white mb-4">랭킹 변화 추이 (최근 10회)</h4>
+                        <div class="relative h-[200px] w-full mb-4">
+                            <canvas id="competitorRankingChart"></canvas>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs text-gray-400">
+                            <div class="bg-white/5 p-2 rounded">
+                                <div class="mb-1">현재</div>
+                                <div class="text-white font-bold text-lg">1위</div>
+                            </div>
+                            <div class="bg-white/5 p-2 rounded">
+                                <div class="mb-1">최고</div>
+                                <div class="text-white font-bold text-lg">1위</div>
+                            </div>
+                            <div class="bg-white/5 p-2 rounded">
+                                <div class="mb-1">최저</div>
+                                <div class="text-gray-500 font-bold text-lg">11위</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-sm text-gray-300">
+                            <p>• 최근 1위~11위 사이를 오가며 큰 변동성을 보이나, 전반적으로 상승 추세입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. 상위 7위 병원 종합 분석 -->
+            <section class="mb-24 animate-fade-in delay-300">
+                <div class="mb-10 border-l-4 border-cyan-400 pl-5">
+                    <h2 class="text-3xl font-bold font-display mb-2 text-white">2. 상위 7위 병원 종합 분석</h2>
+                    <p class="text-gray-400">핵심 지표 비교 및 랭킹 상관관계 분석</p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl mb-8">
+                    <h4 class="text-xl font-bold text-white mb-4">종합 지표 비교</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm whitespace-nowrap">
+                            <thead class="text-gray-400 border-b border-white/10 bg-white/5">
+                                <tr>
+                                    <th class="p-3">랭킹</th>
+                                    <th class="p-3">병원명</th>
+                                    <th class="p-3">방문자 리뷰</th>
+                                    <th class="p-3">블로그 리뷰</th>
+                                    <th class="p-3">블로그 발행(3개월)</th>
+                                    <th class="p-3">답글률</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-300">
+                                <tr class="border-b border-white/5 bg-yellow-400/5">
+                                    <td class="p-3 font-bold text-yellow-400">1위</td>
+                                    <td class="p-3 font-bold text-white">신상성형외과의원</td>
+                                    <td class="p-3">673</td>
+                                    <td class="p-3 font-bold text-cyan-400">4,521</td>
+                                    <td class="p-3 font-bold text-white">110</td>
+                                    <td class="p-3">73.3%</td>
+                                </tr>
+                                <tr class="border-b border-white/5">
+                                    <td class="p-3 font-bold text-gray-400">2위</td>
+                                    <td class="p-3">치유성형외과의원</td>
+                                    <td class="p-3 font-bold text-white">1,561</td>
+                                    <td class="p-3 font-bold text-cyan-400">8,209</td>
+                                    <td class="p-3">42</td>
+                                    <td class="p-3 font-bold text-green-400">97.7%</td>
+                                </tr>
+                                <tr class="border-b border-white/5">
+                                    <td class="p-3 font-bold text-amber-600">3위</td>
+                                    <td class="p-3">바노바기성형외과의원</td>
+                                    <td class="p-3">772</td>
+                                    <td class="p-3">7,279</td>
+                                    <td class="p-3">49</td>
+                                    <td class="p-3 text-gray-500">0.0%</td>
+                                </tr>
+                                <tr class="border-b border-white/5">
+                                    <td class="p-3">4위</td>
+                                    <td class="p-3">밸런스랩성형외과의원</td>
+                                    <td class="p-3">619</td>
+                                    <td class="p-3">3,653</td>
+                                    <td class="p-3">89</td>
+                                    <td class="p-3">89.4%</td>
+                                </tr>
+                                <tr class="border-b border-white/5">
+                                    <td class="p-3">5위</td>
+                                    <td class="p-3">가넷성형외과의원</td>
+                                    <td class="p-3">318</td>
+                                    <td class="p-3">5,584</td>
+                                    <td class="p-3">31</td>
+                                    <td class="p-3">61.9%</td>
+                                </tr>
+                                <tr class="border-b border-white/5">
+                                    <td class="p-3">6위</td>
+                                    <td class="p-3">포에버성형외과의원 강남</td>
+                                    <td class="p-3">1,234</td>
+                                    <td class="p-3">3,678</td>
+                                    <td class="p-3 text-gray-500">9</td>
+                                    <td class="p-3 text-gray-500">0.0%</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">7위</td>
+                                    <td class="p-3">세미성형외과의원</td>
+                                    <td class="p-3">213</td>
+                                    <td class="p-3">3,763</td>
+                                    <td class="p-3 text-gray-500">0</td>
+                                    <td class="p-3 text-gray-500">0.0%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Analysis by Metric -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-lg font-bold text-white mb-4">지표별 영향력 분석</h4>
+                        <div class="relative h-[250px] w-full mb-4">
+                            <canvas id="rankingFactorChart"></canvas>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-400">블로그 발행량 (상관관계 높음)</span>
+                                    <span class="text-cyan-400">1위 신상성형외과 (110건)</span>
+                                </div>
+                                <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-cyan-400" style="width: 100%"></div>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-1">실제 랭킹 1위와 블로그 발행량 1위가 일치함</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-400">답글률 (고객 소통)</span>
+                                    <span class="text-green-400">2위 치유성형외과 (97.7%)</span>
+                                </div>
+                                <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-green-400" style="width: 97%"></div>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-1">상위권 병원일수록 답글 관리가 철저함</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-purple-500/20 to-blue-600/20 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
+                        <h4 class="text-lg font-bold text-white mb-4">랭킹 결정 요인 종합 분석</h4>
+                        <ul class="text-sm text-gray-200 space-y-4 list-disc pl-4 leading-relaxed">
+                            <li>
+                                <strong>블로그 발행량</strong>이 실제 랭킹과 가장 밀접한 관계(평균 랭킹 차이 0.6단계)를 보입니다.
+                            </li>
+                            <li>
+                                상위권(1~3위) 병원들의 평균 방문자 리뷰 수는 <strong>1,002건</strong>으로 중위권 대비 <strong>68.1%</strong>
+                                높습니다.
+                            </li>
+                            <li>
+                                <strong>치유성형외과</strong>와 <strong>신상성형외과</strong>는 높은 답글률을 통해 랭킹 방어에 성공하고 있습니다.
+                            </li>
+                            <li>
+                                방문자 리뷰 순위와 실제 랭킹의 최대 편차는 4단계로, 리뷰 수만으로는 랭킹을 보장할 수 없음을 시사합니다.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 기타 경쟁 병원 분석 -->
+            <section class="mb-24 animate-fade-in delay-300">
+                <div class="mb-10 border-l-4 border-cyan-400 pl-5">
+                    <h2 class="text-3xl font-bold font-display mb-2 text-white">3. 기타 경쟁 병원 분석</h2>
+                    <p class="text-gray-400">중위권 경쟁 병원 현황</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl">
+                        <h4 class="text-lg font-bold text-white mb-2">진성형외과의원</h4>
+                        <div class="flex gap-4 text-sm text-gray-300 mb-4">
+                            <span>방문자 리뷰: <strong>226건</strong></span>
+                            <span>블로그 리뷰: <strong>2,041건</strong></span>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl">
+                        <h4 class="text-lg font-bold text-white mb-2">롤리팝성형외과의원</h4>
+                        <div class="flex gap-4 text-sm text-gray-300 mb-4">
+                            <span>방문자 리뷰: <strong>200건</strong></span>
+                            <span>블로그 리뷰: <strong>123건</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <site-footer theme="dark" base-path=".."></site-footer>
+    <script src="../js/components/footer.js"></script>
+
+    <!-- Page Specific Scripts -->
+    <script>
+        // Competitor Ranking Trend Chart (Line)
+        new Chart(document.getElementById('competitorRankingChart'), {
+            type: 'line',
+            data: {
+                labels: ['10회전', '9회전', '8회전', '7회전', '6회전', '5회전', '4회전', '3회전', '2회전', '현재'],
+                datasets: [{
+                    label: '신상성형외과 랭킹',
+                    data: [11, 8, 5, 3, 2, 1, 2, 1, 1, 1],
+                    borderColor: '#22d3ee',
+                    backgroundColor: 'rgba(34, 211, 238, 0.1)',
+                    tension: 0.4,
+                    fill: true,
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { reverse: true, min: 1, max: 12, grid: { color: 'rgba(255,255,255,0.1)' } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Ranking Factor Chart (Bar)
+        new Chart(document.getElementById('rankingFactorChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Blog Vol', 'Visitor Reviews', 'Blog Reviews', 'Replies'],
+                datasets: [{
+                    label: 'Correlation',
+                    data: [0.85, 0.65, 0.55, 0.3],
+                    backgroundColor: [
+                        '#8b5cf6',
+                        'rgba(139, 92, 246, 0.6)',
+                        'rgba(139, 92, 246, 0.4)',
+                        'rgba(139, 92, 246, 0.2)'
+                    ],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true, max: 1 } }
+            }
+        });
+    </script>
+</body>
+
+</html>
